@@ -15,4 +15,7 @@ body {
     height: 300px;
     text-align: center;
     font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
