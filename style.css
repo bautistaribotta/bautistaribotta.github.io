@@ -1,21 +1,43 @@
-body {
-    background: linear-gradient(to right, #E0F8E0, #FFFFFF);
-    min-height: 100vh;
-    margin: 0; 
-    display: flex;
-    justify-content: center;
-    align-items: center;  
+:root {
+	--color-fondo: #D6CBC1;
+	--color-secundario: #CDD6D0;
+	--color-texto: #9F9F92;
 }
-.card{
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 50px;
-    width: 600px;
-    height: 300px;
-    text-align: center;
-    font-family: sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+body {
+  margin: 0;
+  background-color: var(--color-fondo);
+  font-family: 'Alegreya Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+#tarjeta-presentacion {
+	display: flex;
+	flex-direction: column; /* Elijo el eje principal */
+	justify-content: space-evenly; /* Eje principal: Y */
+	align-items: center; /* Eje secundario: X */
+
+	background-color: var(--color-secundario);
+	border-radius: 14px;
+	box-shadow: 1px 1px 15px var(--color-texto);
+	margin-top: 10vh;
+	margin-left: 10vw;
+	margin-right: 10vw;
+	width: 80vw;
+	height: 80vh;
+}
+
+#saludo {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	color: var(--color-texto)
+}
+
+#imagen-yo {
+	box-shadow: 1px 1px 5px 0px var(--color-texto);
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	object-fit: cover;
+	border-width: 2px;
+	border-color: var(--color-texto);
+	border-style: solid;
 }
