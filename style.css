@@ -14,12 +14,13 @@
 }
 
 body {
-  margin: 0;
   background-color: var(--color-naranja-pastel);
   font-family: "Inter", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  margin: 0%;
 }
 
 #barra-navegacion {
@@ -29,8 +30,10 @@ body {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 2vw;
+  padding: 0 2vw;
+  box-sizing: border-box;
   height: 10vh;
+  width: 100%;
 }
 
 #barra-navegacion ul:hover{
@@ -39,9 +42,9 @@ body {
 }
 
 #nombre {
-  margin-right: 55vw;
   padding-right: 0px; 
   font-weight: bold;
+  margin-right: auto;
 }
 
 #presentacion-foto {
@@ -51,14 +54,15 @@ body {
   justify-content: space-around;
   align-items: center;
   width: 70vw;
-  height: 50vh;
+  height: 70vh;
   border-radius: 8px;
-  margin-top: 15vh;
+  margin-top: 10vh;
+  box-shadow: 2px 2px 5px 0px var(--color-fondo);
 }
 
 #imagen-personal {
-  width: 90px;
-  height: 120px;
+  width: 280px;
+  height: 300px;
   border-radius: 8px;
   box-shadow: 2px 2px 10px 0px var(--color-fondo);
 }
