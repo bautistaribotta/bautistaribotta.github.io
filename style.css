@@ -3,42 +3,66 @@
 	--color-naranja-pastel: #D6CBC1;
 	--color-secundario: #CDD6D0;
 	--color-texto: #9F9F92;
+  margin: 0px;
+}
+
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
 }
 
 body {
   margin: 0;
-  background-color: var(--color-fondo);
-  font-family: 'Alegreya Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--color-naranja-pastel);
+  font-family: "Inter", sans-serif;
 }
 
-#tarjeta-presentacion {
-	display: flex;
-	flex-direction: column; /* Elijo el eje principal */
-	justify-content: space-evenly; /* Eje principal: Y */
-	align-items: center; /* Eje secundario: X */
-
-	background-color: var(--color-secundario);
-	border-radius: 8px;
-	box-shadow: 1px 1px 5px var(--color-texto);
-	margin-top: 10vh;
-	margin-left: 10vw;
-	margin-right: 10vw;
-	width: 80vw;
-	height: 80vh;
+#barra-navegacion {
+  background-color: var(--color-texto);
+  color: var(--color-secundario);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 2vw;
+  height: 10vh;
 }
 
-#saludo {
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	color: var(--color-fondo)
+#barra-navegacion ul:hover{
+  cursor: pointer;
+  user-select: none;
 }
 
-#imagen-yo {
-	box-shadow: 1px 1px 5px 0px var(--color-fondo);
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-	object-fit: cover;
-	border-width: 2px;
-	border-color: var(--color-texto);
-	border-style: solid;
+#nombre {
+  margin-right: 55vw;
+  padding-right: 0px; 
+  font-weight: bold;
+}
+
+#presentacion-foto {
+  background-color: var(--color-texto);
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+  width: 70vw;
+  height: 50vh;
+  border-radius: 8px;
+  margin-top: 30vh;
+}
+
+#imagen-personal {
+  width: 90px;
+  height: 120px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px 0px var(--color-fondo);
+}
+
+#texto-presentacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
 }
