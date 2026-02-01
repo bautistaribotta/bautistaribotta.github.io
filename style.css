@@ -126,18 +126,26 @@ a {
   flex-direction: row;
   justify-content: space-between;
   height: 50px;
-  color: var(--color-texto);
-  background-color: var(--color-fondo-oscuro);
+}
+
+#botones:hover {
+  cursor: pointer;
 }
 
 #CV {
   width: 300px;
   border-radius: 15px;
+  border: none;
+  color: var(--color-texto);
+  background-color: var(--color-fondo-oscuro);
 }
 
 #linkedin, #github {
   width: 50px;
   border-radius: 15px;
+  border: none;
+  color: var(--color-texto);
+  background-color: var(--color-fondo-oscuro);
 }
 
 #stack {
@@ -176,9 +184,9 @@ a {
 
 /* Efecto al pasar el mouse */
 #stack div:hover {
-  transform: translateY(-5px); /* Se levanta un poco */
-  background: #ffffff26;  /* Se ilumina un poco más */
   cursor: pointer;
+  background: #ffffff26;  /* Se ilumina un poco más */
+  transform: translateY(-5px); /* Se levanta un poco */
   border-color: var(--color-secundario);
   box-shadow: 0 0 15px var(--color-secundario);
 }
