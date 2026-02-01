@@ -125,6 +125,11 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+#botones a {
+  display: flex;
+  align-items: center;
   height: 50px;
 }
 
@@ -139,7 +144,9 @@ a {
 
 #linkedin, #github {
   width: 50px;
+  padding: 0;
   border: none;
+  height: 100%;
   cursor: pointer;
   border-radius: 15px;
   color: var(--color-texto);
