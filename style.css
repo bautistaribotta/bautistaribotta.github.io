@@ -58,8 +58,6 @@ a {
   box-sizing: border-box;
   height: 10vh;
   width: 100%;
-
-  /* Mantener en su posicion a la barra de navegacion */
   position: sticky; /* Que la barra se quede pegada */
   top: 0; /* Le indica que se quede pegado cuando llegue al borde superior */
   z-index: 1000; /* Asegura que la barra flote por encima de cualquier otro contenido */
@@ -121,4 +119,45 @@ a {
 
 #descripcion {
   font-size: 0.5em;
+}
+
+#stack {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-top: 100vh;
+  color: var(--color-texto);
+  font-size: 16px;
+}
+
+#stack p {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#stack div {
+  background: #ffffff0d; /* Blanco muy transparente */
+  backdrop-filter: blur(10px);           /* Desenfoca lo que hay detrás */
+  -webkit-backdrop-filter: blur(10px);   /* Soporte para Safari */
+  
+  border: 1px solid #ffffff1a; /* Borde sutil para definir la caja */
+  border-radius: 15px;                   /* Bordes redondeados */
+  padding: 20px;                         /* Espacio interno */
+  box-shadow: 0 4px 15px #00000033; /* Sombra para profundidad */
+  
+  /* Para asegurar que sean uniformes */
+  min-width: 120px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+#stack div:hover {
+  transform: translateY(-5px); /* Se levanta un poco */
+  background: #ffffff26;  /* Se ilumina un poco más */
+  cursor: pointer;
 }
