@@ -58,11 +58,11 @@ a {
   box-sizing: border-box;
   height: 10vh;
   width: 100%;
-  
+
   /* Mantener en su posicion a la barra de navegacion */
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  position: sticky; /* Que la barra se quede pegada */
+  top: 0; /* Le indica que se quede pegado cuando llegue al borde superior */
+  z-index: 1000; /* Asegura que la barra flote por encima de cualquier otro contenido */
 }
 
 #botones-navegacion {
