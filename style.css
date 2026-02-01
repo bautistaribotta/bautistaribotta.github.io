@@ -137,6 +137,7 @@ a {
   width: 300px;
   border: none;
   cursor: pointer;
+  font-weight: bold;
   border-radius: 15px;
   color: var(--color-texto);
   background-color: var(--color-fondo-oscuro);
