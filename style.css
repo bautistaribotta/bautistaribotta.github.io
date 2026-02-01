@@ -97,7 +97,7 @@ a {
 #imagen-personal {
   width: 280px;
   height: 300px;
-  border-radius: 50%;
+  border-radius: 15px;
   object-fit: cover;
   object-position: center;
   box-shadow: 2px 2px 40px 0px var(--color-primario);
@@ -119,6 +119,25 @@ a {
 
 #descripcion {
   font-size: 0.5em;
+}
+
+#botones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50px;
+  color: var(--color-texto);
+  background-color: var(--color-fondo-oscuro);
+}
+
+#CV {
+  width: 300px;
+  border-radius: 15px;
+}
+
+#linkedin, #github {
+  width: 50px;
+  border-radius: 15px;
 }
 
 #stack {
@@ -160,4 +179,6 @@ a {
   transform: translateY(-5px); /* Se levanta un poco */
   background: #ffffff26;  /* Se ilumina un poco más */
   cursor: pointer;
+  border-color: var(--color-secundario);
+  box-shadow: 0 0 15px var(--color-secundario);
 }
