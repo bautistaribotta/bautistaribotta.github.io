@@ -130,6 +130,7 @@ a {
 
 #botones:hover {
   cursor: pointer;
+  cursor: inherit;
 }
 
 #CV {
