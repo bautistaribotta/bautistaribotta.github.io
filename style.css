@@ -23,12 +23,18 @@ body {
   margin: 0%;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 #barra-navegacion {
   background-color: var(--color-fondo);
   color: var(--color-texto);
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 0 2vw;
   box-sizing: border-box;
@@ -39,6 +45,7 @@ body {
 #botones-navegacion {
   display: flex;
   flex-direction: row;
+  gap: 30px;
 }
 
 #barra-navegacion ul:hover{
