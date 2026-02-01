@@ -23,10 +23,12 @@ body {
   margin: 0%;
 }
 
-ul {
+a {
   padding: 0;
   margin: 0;
   list-style: none;
+  text-decoration: none; /* Quita la línea de abajo */
+  color: inherit; /* Hereda el color del elemento padre */
 }
 
 #barra-navegacion {
@@ -48,7 +50,7 @@ ul {
   gap: 30px;
 }
 
-#barra-navegacion ul:hover{
+#barra-navegacion a:hover{
   cursor: pointer;
   user-select: none;
 }
