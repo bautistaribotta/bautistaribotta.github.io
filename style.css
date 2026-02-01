@@ -58,6 +58,11 @@ a {
   box-sizing: border-box;
   height: 10vh;
   width: 100%;
+  
+  /* Mantener en su posicion a la barra de navegacion */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 #botones-navegacion {
