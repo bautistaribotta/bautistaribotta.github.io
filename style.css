@@ -128,23 +128,20 @@ a {
   height: 50px;
 }
 
-#botones:hover {
-  cursor: pointer;
-  cursor: inherit;
-}
-
 #CV {
   width: 300px;
-  border-radius: 15px;
   border: none;
+  cursor: pointer;
+  border-radius: 15px;
   color: var(--color-texto);
   background-color: var(--color-fondo-oscuro);
 }
 
 #linkedin, #github {
   width: 50px;
-  border-radius: 15px;
   border: none;
+  cursor: pointer;
+  border-radius: 15px;
   color: var(--color-texto);
   background-color: var(--color-fondo-oscuro);
 }
