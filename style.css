@@ -14,13 +14,30 @@
 }
 
 body {
-  background-color: #0f0c15;
   font-family: "Inter", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   margin: 0%;
+
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(45deg, var(--color-fondo-oscuro), #2b0119, #010020 );
+  background-size: 400% 400%;
+  animation: gradient 12s ease-in infinite;
+}
+
+/* Animacion del gradiante del fondo */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 a {
@@ -32,7 +49,7 @@ a {
 }
 
 #barra-navegacion {
-  background-color: var(--color-fondo);
+  background-color: var(--color-fondo-oscuro);
   color: var(--color-texto);
   display: flex;
   flex-direction: row;
