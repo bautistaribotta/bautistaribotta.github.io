@@ -315,5 +315,9 @@ footer {
   justify-content: start;
   align-items: center;
   padding-left: 2vw;
-  border-radius: 0%;
+}
+
+footer.glass-style {
+  /* Para que las esquinas se vean igual a la barra nav */
+  border-radius: 0;
 }
