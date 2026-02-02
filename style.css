@@ -88,6 +88,26 @@ a {
   transform: translateY(-2px);
 }
 
+.glass-style {
+  color: var(--color-texto);
+  background: #ffffff0d;               /* Blanco muy transparente */
+  backdrop-filter: blur(10px);           /* Desenfoca lo que hay detrás */
+  -webkit-backdrop-filter: blur(10px);   /* Soporte para Safari */
+  border: 1px solid #ffffff1a;         /* Borde sutil para definir la caja */
+  border-radius: 15px;                   /* Bordes redondeados */
+  box-shadow: 0 4px 15px #0000005d;    /* Sombra para profundidad */
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.glass-style:hover {
+  cursor: pointer;
+  background: #ffffff26;                /* Se ilumina un poco más */
+  transform: translateY(-5px);            /* Se levanta un poco */
+  border-color: var(--color-secundario);
+  box-shadow: 0 0 15px var(--color-texto);
+}
+
 #nombre {
   padding-right: 0px; 
   font-weight: bold;
@@ -133,69 +153,22 @@ a {
 }
 
 #botones {
-  margin-top: 20px;
+  margin-top: 5vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-#botones button {
-  transition: all 0.3s ease
-}
-
-#botones button:hover {
-  transform: translateY(-2px);
-}
-
-#botones a {
-  height: 50px;
-  display: flex;
-  align-items: center;
-  transition: all 0.3s ease;
-}
-
-#botones a:hover {
-  transform: translateY(-2px);
-}
-
-#CV, #linkedin, #github {
-  background: #ffffff0d;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid #ffffff1a;
-  color: var(--color-texto);
-  box-shadow: 2px 2px 80px 0px #061a0083;
-  cursor: pointer;
-  border-radius: 15px;
-  
-}
-
-#CV:hover, #linkedin:hover, #github:hover {
-  border-color: var(--color-secundario); /* El "marco verde" */
-  box-shadow: 0 0 15px var(--color-texto); /* El resplandor */
-  background: #ffffff26; 
-}
-
 #CV {
+  height: 50px;
   width: 300px;
-  border: none;
-  cursor: pointer;
   font-weight: bold;
-  border-radius: 15px;
-  color: var(--color-texto);
-  font-family: "Inter", sans-serif;
-  box-shadow: 2px 2px 80px 0px #061a0083;
 }
 
 #linkedin, #github {
   width: 50px;
-  padding: 0;
-  border: none;
   height: 100%;
-  cursor: pointer;
-  border-radius: 15px;
   color: var(--color-texto);
-  box-shadow: 2px 2px 80px 0px #061a0083;
 }
 
 #stack-titulo {
@@ -233,7 +206,7 @@ a {
   border: 1px solid #ffffff1a; /* Borde sutil para definir la caja */
   border-radius: 15px;                   /* Bordes redondeados */
   padding: 20px;                         /* Espacio interno */
-  box-shadow: 0 4px 15px #00000033; /* Sombra para profundidad */
+  box-shadow: 0 4px 15px #0000005d; /* Sombra para profundidad */
   margin-bottom: 100px;
   
   /* Para asegurar que sean uniformes */
@@ -309,6 +282,7 @@ textarea.glass-style-input {
 }
 
 #boton-enviar-mensaje {
+  padding: 20px;
   margin-top: 5vh;
   width: 15vw;
 }
