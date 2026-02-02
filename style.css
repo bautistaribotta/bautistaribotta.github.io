@@ -101,7 +101,7 @@ a {
   resize: none
 }
 
-.glass-style:hover {
+.glass-style:not(footer):hover {
   cursor: pointer;
   background: #ffffff26;                /* Se ilumina un poco más */
   transform: translateY(-5px);            /* Se levanta un poco */
@@ -309,15 +309,11 @@ input.glass-style:hover, textarea.glass-style:hover {
 footer {
   height: 20vh;
   width: 100%;
-  color: var(--color-texto);
   display: flex;
   margin-top: auto;
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  background-color: var(--color-fondo-oscuro);
-}
-
-footer p {
-  margin-left: 50px;
+  padding-left: 2vw;
+  border-radius: 0%;
 }
