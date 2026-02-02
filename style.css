@@ -194,6 +194,16 @@ a {
   box-shadow: 2px 2px 80px 0px #061a0083;
 }
 
+#stack-titulo {
+  width: 100%;
+  margin: 20vh auto -10vh 10vw;
+  display:flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  color: var(--color-texto)
+}
+
 #stack {
   display: flex;
   flex-direction: row;
@@ -251,4 +261,28 @@ footer {
 
 footer p {
   margin-left: 50px;
+}
+
+#titulo-contacto {
+  color: #D7FDF0;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  margin-right: 43vw;
+}
+
+#contacto {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  color: var(--color-texto);
+}
+
+#cuadro-principal {
+  width: 50vw;
+  height: 50vh;
+  padding: 20px;                         /* Espacio interno */
+  margin-bottom: 20vh;
+  border-radius: 15px;                   /* Bordes redondeados */
+  box-shadow: 0 4px 15px #00000033; /* Sombra para profundidad */
+  border: 1px solid #ffffff1a; /* Borde sutil para definir la caja */
 }
