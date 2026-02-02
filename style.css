@@ -13,6 +13,10 @@
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Inter", sans-serif;
   display: flex;
@@ -100,7 +104,7 @@ a {
   border-radius: 15px;
   object-fit: cover;
   object-position: center;
-  box-shadow: 2px 2px 40px 0px var(--color-texto);
+  box-shadow: 2px 2px 20px 0px var(--color-texto);
 }
 
 #texto-presentacion {
@@ -143,7 +147,8 @@ a {
   border-radius: 15px;
   color: var(--color-texto);
   background-color: var(--color-fondo-oscuro);
-  box-shadow: 2px 2px 30px 0px var(--color-texto);
+  font-family: "Inter", sans-serif;
+  box-shadow: 2px 2px 20px 0px var(--color-texto);
 }
 
 #linkedin, #github {
@@ -155,7 +160,7 @@ a {
   border-radius: 15px;
   color: var(--color-texto);
   background-color: var(--color-fondo-oscuro);
-  box-shadow: 2px 2px 40px 0px var(--color-texto);
+  box-shadow: 2px 2px 20px 0px var(--color-texto);
 }
 
 #stack {
@@ -199,4 +204,20 @@ a {
   transform: translateY(-5px); /* Se levanta un poco */
   border-color: var(--color-secundario);
   box-shadow: 0 0 15px var(--color-texto);
+}
+
+footer {
+  height: 20vh;
+  width: 100%;
+  color: var(--color-texto);
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  background-color: var(--color-fondo-oscuro);
+}
+
+footer p {
+  margin-left: 50px;
 }
