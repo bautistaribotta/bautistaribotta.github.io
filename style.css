@@ -247,22 +247,6 @@ a {
   box-shadow: 0 0 15px var(--color-texto);
 }
 
-footer {
-  height: 20vh;
-  width: 100%;
-  color: var(--color-texto);
-  display: flex;
-  margin-top: auto;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  background-color: var(--color-fondo-oscuro);
-}
-
-footer p {
-  margin-left: 50px;
-}
-
 #titulo-contacto {
   color: #D7FDF0;
   display: flex;
@@ -282,4 +266,35 @@ footer p {
   font-family: "Inter", sans-serif;
   box-shadow: 0 4px 15px #00000033;  /* Sombra para profundidad */
   border: 1px solid #ffffff1a;  /* Borde sutil para definir la caja */
+}
+
+#cuadro-principal p {
+  font-style: normal;
+  font-weight: normal;
+}
+
+.glass-style-input {
+  background: #ffffff0d; /* Blanco muy transparente */
+  backdrop-filter: blur(10px);           /* Desenfoca lo que hay detrás */
+  -webkit-backdrop-filter: blur(10px);   /* Soporte para Safari */
+  
+  border: 1px solid #ffffff1a; /* Borde sutil para definir la caja */
+  border-radius: 15px;                   /* Bordes redondeados */
+  box-shadow: 0 4px 15px #00000033; /* Sombra para profundidad */
+}
+
+footer {
+  height: 20vh;
+  width: 100%;
+  color: var(--color-texto);
+  display: flex;
+  margin-top: auto;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  background-color: var(--color-fondo-oscuro);
+}
+
+footer p {
+  margin-left: 50px;
 }
