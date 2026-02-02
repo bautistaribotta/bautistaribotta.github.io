@@ -269,6 +269,7 @@ a {
 }
 
 #cuadro-principal p {
+  margin-bottom: 5px;
   font-style: normal;
   font-weight: normal;
 }
@@ -277,10 +278,11 @@ a {
   background: #ffffff0d; /* Blanco muy transparente */
   backdrop-filter: blur(10px);           /* Desenfoca lo que hay detrás */
   -webkit-backdrop-filter: blur(10px);   /* Soporte para Safari */
-  
   border: 1px solid #ffffff1a; /* Borde sutil para definir la caja */
   border-radius: 15px;                   /* Bordes redondeados */
   box-shadow: 0 4px 15px #00000033; /* Sombra para profundidad */
+  width: 49vw;
+  height: 5vh;
 }
 
 footer {
