@@ -53,8 +53,8 @@ a {
 
 #nav {
   background: #ffffff0d; 
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Por si lo abren en safari */
   border-bottom: 1px solid #ffffff1a;
   color: var(--color-texto);
   display: flex;
