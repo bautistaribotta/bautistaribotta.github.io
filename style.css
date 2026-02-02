@@ -152,6 +152,15 @@ a {
   margin: 0;
 }
 
+#botones a {
+  display: flex;            /* Elimina el espacio fantasma de texto */
+  align-items: center;      /* Centra el botón verticalmente */
+  justify-content: center;  /* Centra horizontalmente */
+  height: 50px;             /* Fuerza la misma altura que tu botón de CV */
+  width: 50px;              /* Asegura el ancho del botón */
+  text-decoration: none;
+}
+
 #botones {
   margin-top: 5vh;
   display: flex;
@@ -166,9 +175,10 @@ a {
 }
 
 #linkedin, #github {
-  width: 50px;
+  width: 60px;
   height: 100%;
   color: var(--color-texto);
+  background-color: transparent;
 }
 
 #stack-titulo {
