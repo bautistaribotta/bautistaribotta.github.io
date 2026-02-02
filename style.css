@@ -47,7 +47,7 @@ a {
   color: inherit; /* Hereda el color del elemento padre */
 }
 
-#barra-navegacion {
+#nav {
   background-color: var(--color-fondo-oscuro);
   color: var(--color-texto);
   display: flex;
@@ -143,6 +143,7 @@ a {
   border-radius: 15px;
   color: var(--color-texto);
   background-color: var(--color-fondo-oscuro);
+  box-shadow: 2px 2px 40px 0px var(--color-primario);
 }
 
 #linkedin, #github {
@@ -154,6 +155,7 @@ a {
   border-radius: 15px;
   color: var(--color-texto);
   background-color: var(--color-fondo-oscuro);
+  box-shadow: 2px 2px 40px 0px var(--color-primario);
 }
 
 #stack {
