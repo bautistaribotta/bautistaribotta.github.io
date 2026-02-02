@@ -1,8 +1,8 @@
 :root {
-	--color-fondo-oscuro: #0B0112;
-	--color-primario: #4B0E6C;
-	--color-secundario: #A523E8;
-	--color-texto: #EAFFFD;
+	--color-fondo-oscuro: #06372C;
+	--color-primario: #06372C;
+	--color-secundario: #6CEFD2;
+	--color-texto: #D7FDF0;
   margin: 0px;
 }
 
@@ -21,7 +21,7 @@ body {
   margin: 0%;
   height: 400vh;
   width: 100%;
-  background: linear-gradient(45deg, var(--color-fondo-oscuro), #2b0119, #010020 );
+  background: linear-gradient(45deg, #06372C, #0A5C4A, #D7FDF0);
   background-size: 400% 400%;
   animation: gradient 12s ease-in infinite;
 }
@@ -100,7 +100,7 @@ a {
   border-radius: 15px;
   object-fit: cover;
   object-position: center;
-  box-shadow: 2px 2px 40px 0px var(--color-primario);
+  box-shadow: 2px 2px 40px 0px var(--color-texto);
 }
 
 #texto-presentacion {
@@ -143,7 +143,7 @@ a {
   border-radius: 15px;
   color: var(--color-texto);
   background-color: var(--color-fondo-oscuro);
-  box-shadow: 2px 2px 40px 0px var(--color-primario);
+  box-shadow: 2px 2px 30px 0px var(--color-texto);
 }
 
 #linkedin, #github {
@@ -155,7 +155,7 @@ a {
   border-radius: 15px;
   color: var(--color-texto);
   background-color: var(--color-fondo-oscuro);
-  box-shadow: 2px 2px 40px 0px var(--color-primario);
+  box-shadow: 2px 2px 40px 0px var(--color-texto);
 }
 
 #stack {
@@ -198,5 +198,5 @@ a {
   background: #ffffff26;  /* Se ilumina un poco más */
   transform: translateY(-5px); /* Se levanta un poco */
   border-color: var(--color-secundario);
-  box-shadow: 0 0 15px var(--color-secundario);
+  box-shadow: 0 0 15px var(--color-texto);
 }
