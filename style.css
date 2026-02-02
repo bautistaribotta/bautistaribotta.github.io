@@ -98,6 +98,7 @@ a {
   box-shadow: 0 4px 15px #0000005d;    /* Sombra para profundidad */
   text-align: center;
   transition: transform 0.3s ease;
+  resize: none
 }
 
 .glass-style:hover {
@@ -106,6 +107,11 @@ a {
   transform: translateY(-5px);            /* Se levanta un poco */
   border-color: var(--color-secundario);
   box-shadow: 0 0 15px var(--color-texto);
+}
+
+input.glass-style:hover, textarea.glass-style:hover {
+  transform: none;
+  cursor: text;    
 }
 
 #nombre {
