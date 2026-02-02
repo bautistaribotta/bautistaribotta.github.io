@@ -268,13 +268,7 @@ input.glass-style:hover, textarea.glass-style:hover {
   font-weight: normal;
 }
 
-.glass-style-input {
-  background: #ffffff0d; /* Blanco muy transparente */
-  backdrop-filter: blur(10px);           /* Desenfoca lo que hay detrás */
-  -webkit-backdrop-filter: blur(10px);   /* Soporte para Safari */
-  border: 1px solid #ffffff1a; /* Borde sutil para definir la caja */
-  border-radius: 15px;                   /* Bordes redondeados */
-  box-shadow: 0 4px 15px #00000033; /* Sombra para profundidad */
+#input-nombre, #imput-email, #input-mensaje {
   font-family: "Inter", sans-serif; /* Para que herede tu letra */
   font-size: 16px;
   resize: none;
@@ -290,17 +284,17 @@ textarea.glass-style-input {
   padding-top: 15px;  /* Para que el texto empiece un poco más abajo */
 }
 
+#boton-enviar-mensaje {
+  padding: 20px;
+  margin-top: 5vh;
+  width: 15vw;
+}
+
 #container-boton-enviar {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-
-#boton-enviar-mensaje {
-  padding: 20px;
-  margin-top: 5vh;
-  width: 15vw;
 }
 
 footer {
