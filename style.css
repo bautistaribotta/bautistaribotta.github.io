@@ -288,7 +288,7 @@ input.glass-style:hover, textarea.glass-style:hover {
 #boton-enviar-mensaje {
   padding: 20px;
   margin-top: 5vh;
-  width: 15vw;
+  width: 12vw;
 }
 
 #container-boton-enviar {
@@ -296,6 +296,14 @@ input.glass-style:hover, textarea.glass-style:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+#input-nombre:focus, 
+#input-email:focus, 
+#input-mensaje:focus {
+  outline: none;                                /* Quita el borde negro que viene por defecto */
+  border-color: var(--color-secundario);        /* Borde verde menta */
+  box-shadow: 0 0 10px var(--color-secundario); /* Resplandor */
 }
 
 footer {
