@@ -57,7 +57,7 @@ body {
   background-image: 
     radial-gradient(circle at 10% 20%, #6cefd226 0%, transparent 50%),
     radial-gradient(circle at 90% 80%, #06372c80 0%, transparent 50%);
-  background-attachment: fixed;
+  background-attachment: fixed; /* Fondo fijo */
 }
 
 a {
@@ -212,7 +212,7 @@ input.glass-style:hover, textarea.glass-style:hover {
 }
 
 #titulo-stack {
-  width: 90%;
+  width: 80%;
   margin: 20vh auto -10vh 10vw;
   display:flex;
   flex-direction: row;
@@ -263,8 +263,23 @@ input.glass-style:hover, textarea.glass-style:hover {
   box-shadow: 0 0 15px var(--color-texto);
 }
 
+#titulo-proyectos {
+  width: 80%;
+  margin: 5vh auto 30vh 10vw;
+  display:flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  color: var(--color-texto);
+}
+
+#contenedor-proyectos {
+  
+}
+
 #titulo-contacto {
   color: #D7FDF0;
+  margin: 30vh auto auto 0vw;
   display: flex;
   flex-direction: row;
   justify-items: center;
