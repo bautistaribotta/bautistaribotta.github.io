@@ -3,6 +3,8 @@
 	--color-primario: #06372C;
 	--color-secundario: #6CEFD2;
 	--color-texto: #D7FDF0;
+  --color-vidrio: #ffffff0d;
+  --color-vidrio-hover: #ffffff26;
 }
 
 * {
@@ -68,7 +70,7 @@ a {
 }
 
 #nav {
-  background: #ffffff0d; 
+  background: var(--color-vidrio); 
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px); /* Por si lo abren en safari */
   border-bottom: 1px solid #ffffff1a;
@@ -104,7 +106,7 @@ a {
 
 .glass-style {
   color: var(--color-texto);
-  background: #ffffff0d;               /* Blanco muy transparente */
+  background: var(--color-vidrio);               /* Blanco muy transparente */
   backdrop-filter: blur(10px);           /* Desenfoca lo que hay detrás */
   -webkit-backdrop-filter: blur(10px);   /* Soporte para Safari */
   border: 1px solid #ffffff1a;         /* Borde sutil para definir la caja */
@@ -117,7 +119,7 @@ a {
 
 .glass-style:not(footer):hover {
   cursor: pointer;
-  background: #ffffff26;                /* Se ilumina un poco más */
+  background: var(--color-vidrio-hover);                /* Se ilumina un poco más */
   transform: translateY(-5px);            /* Se levanta un poco */
   border-color: var(--color-secundario);
   box-shadow: 0 0 15px var(--color-texto);
@@ -161,6 +163,7 @@ input.glass-style:hover, textarea.glass-style:hover {
 
 #div-imagen:hover {
   transform: none; /* Anulo el movimiento de subir */
+  background: var(--color-vidrio);
 }
 
 #texto-presentacion {
@@ -239,7 +242,7 @@ input.glass-style:hover, textarea.glass-style:hover {
 }
 
 #stack div {
-  background: #ffffff0d; /* Blanco muy transparente */
+  background: var(--color-vidrio); /* Blanco muy transparente */
   backdrop-filter: blur(10px);           /* Desenfoca lo que hay detrás */
   -webkit-backdrop-filter: blur(10px);   /* Soporte para Safari */
   
@@ -257,7 +260,7 @@ input.glass-style:hover, textarea.glass-style:hover {
 
 #stack div:hover {
   cursor: pointer;
-  background: #ffffff26;                  /* Se ilumina un poco más */
+  background: var(--color-vidrio-hover);                  /* Se ilumina un poco más */
   transform: translateY(-5px);              /* Se levanta un poco */
   border-color: var(--color-secundario);
   box-shadow: 0 0 15px var(--color-texto);
