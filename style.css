@@ -260,7 +260,7 @@ input.glass-style:hover, textarea.glass-style:hover {
 
 #stack div:hover {
   cursor: pointer;
-  background: var(--color-vidrio-hover);                  /* Se ilumina un poco más */
+  background: var(--color-vidrio-hover);    /* Se ilumina un poco más */
   transform: translateY(-5px);              /* Se levanta un poco */
   border-color: var(--color-secundario);
   box-shadow: 0 0 15px var(--color-texto);
@@ -285,6 +285,35 @@ input.glass-style:hover, textarea.glass-style:hover {
   flex-wrap: wrap;         /* Si la pantalla es chica, baja uno */
 }
 
+
+#contenedor-proyectos {
+  width: 100%;             /* Ocupa todo el ancho */
+  overflow: hidden;        /* Lo que se salga de aquí, no se ve (quita el scroll horizontal) */
+  margin-bottom: 10vh;
+  position: relative;
+}
+
+.slide-track {
+  display: flex;
+  gap: 50px;
+  width: max-content; 
+  animation: scroll 30s linear infinite; 
+}
+
+/* Pausar la animación si el usuario pone el mouse encima */
+.slide-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-240px * 2 - 100px)); 
+  }
+}
+
 .card-proyecto {
   width: 240px;
   height: 320px;
@@ -295,6 +324,7 @@ input.glass-style:hover, textarea.glass-style:hover {
   color: var(--color-texto);
   margin-top: 5vh;
   margin-bottom: 5vh;
+  flex-shrink: 0;
 }
 
 #titulo-contacto {
