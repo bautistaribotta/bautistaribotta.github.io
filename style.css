@@ -5,13 +5,6 @@
 	--color-texto: #D7FDF0;
 }
 
-.inter-font {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -164,7 +157,6 @@ input.glass-style:hover, textarea.glass-style:hover {
   justify-content: center;  /* Centra horizontalmente */
   height: 50px;             /* Fuerza la misma altura que tu botón de CV */
   width: 50px;              /* Asegura el ancho del botón */
-  text-decoration: none;
 }
 
 #botones {
