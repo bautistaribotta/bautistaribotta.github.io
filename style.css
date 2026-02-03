@@ -145,15 +145,24 @@ input.glass-style:hover, textarea.glass-style:hover {
 
 #div-imagen {
   margin-top: 8%;
+  margin-right: 20px;
+  width: 300px;
+  height: 350px;
+  justify-content: center;
 }
 
 #imagen-personal {
-  width: 280px;
-  height: 300px;
-  border-radius: 15px;
+  margin-top: 20px;
+  width: 260px;
+  height: 250px;
+  border-radius: 8px;
   object-fit: cover;
   object-position: center;
   box-shadow: 2px 2px 80px 0px #061a0083;
+}
+
+#div-imagen:hover {
+  transform: none; /* Anulo el movimiento de subir */
 }
 
 #texto-presentacion {
