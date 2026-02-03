@@ -54,8 +54,6 @@ body {
   width: 100%;
   min-height: 100vh;
   background-color: var(--color-fondo-oscuro);
-
-  background-color: var(--color-fondo-oscuro);
   background-image: 
     radial-gradient(circle at 10% 20%, #6cefd226 0%, transparent 50%),
     radial-gradient(circle at 90% 80%, #06372c80 0%, transparent 50%);
