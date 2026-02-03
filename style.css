@@ -187,7 +187,7 @@ input.glass-style:hover, textarea.glass-style:hover {
   background-color: transparent;
 }
 
-#stack-titulo {
+#titulo-stack {
   width: 90%;
   margin: 20vh auto -10vh 10vw;
   display:flex;
