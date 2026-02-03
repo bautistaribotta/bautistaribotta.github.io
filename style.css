@@ -5,13 +5,20 @@
 	--color-texto: #D7FDF0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth; /* Animacion lenta para desplazarte */
   scroll-padding-top: 10vh; /* Para que la barra de navegacion no tape etiquetes al desplazarse */
 }
 
-* {
-  box-sizing: border-box;
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 body {
