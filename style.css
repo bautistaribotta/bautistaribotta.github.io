@@ -23,6 +23,8 @@ main {
 }
 
 body {
+  overflow-x: hidden; /* Oculta el scroll horizontal */
+  width: 100%;
   font-family: "Inter", sans-serif;
   display: flex;
   flex-direction: column;
