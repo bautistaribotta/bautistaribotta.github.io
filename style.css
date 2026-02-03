@@ -6,7 +6,8 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* Animacion lenta para desplazarte */
+  scroll-padding-top: 10vh; /* Para que la barra de navegacion no tape etiquetes al desplazarse */
 }
 
 * {
