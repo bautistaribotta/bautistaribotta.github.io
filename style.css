@@ -9,6 +9,27 @@
   box-sizing: border-box;
 }
 
+/* 1. El ancho total de la barra */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* 2. El fondo por donde corre la barra */
+::-webkit-scrollbar-track {
+  background: var(--color-fondo-oscuro);
+}
+
+/* 3. La "pastilla" que se arrastra */
+::-webkit-scrollbar-thumb {
+  background: var(--color-texto);
+  border-radius: 5px;
+}
+
+/* 4. Efecto al pasar el mouse por encima de la barra */
+::-webkit-scrollbar-thumb:hover {
+  background: #5aceb3;
+}
+
 html {
   scroll-behavior: smooth; /* Animacion lenta para desplazarte */
   scroll-padding-top: 10vh; /* Para que la barra de navegacion no tape etiquetes al desplazarse */
