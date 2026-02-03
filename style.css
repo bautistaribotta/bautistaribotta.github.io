@@ -1,5 +1,5 @@
 :root {
-	--color-fondo-oscuro: #06372C;
+	--color-fondo-oscuro: #000504;
 	--color-primario: #06372C;
 	--color-secundario: #6CEFD2;
 	--color-texto: #D7FDF0;
@@ -53,22 +53,13 @@ body {
   margin: 0%;
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(45deg, #06372C, #0A5C4A, #5c6d67);
-  background-size: 400% 400%;
-  animation: gradient 12s ease-in infinite;
-}
+  background-color: var(--color-fondo-oscuro);
 
-/* Animacion del gradiante del fondo */
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  background-color: var(--color-fondo-oscuro);
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(108, 239, 210, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(6, 55, 44, 0.5) 0%, transparent 50%);
+  background-attachment: fixed;
 }
 
 a {
