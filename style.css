@@ -302,7 +302,6 @@ input.glass-style:hover, textarea.glass-style:hover {
 }
 
 #stack div:hover {
-  cursor: pointer;
   background: var(--color-vidrio-hover);    /* Se ilumina un poco más */
   transform: translateY(-5px);              /* Se levanta un poco */
   border-color: var(--color-secundario);
