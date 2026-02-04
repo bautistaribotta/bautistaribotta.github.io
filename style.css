@@ -70,6 +70,64 @@ main {
   align-items: center;
 }
 
+#selector-tema {
+  background: var(--color-vidrio);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid #ffffff1a;
+  border-radius: 50px;
+  
+  /* Posición fija */
+  position: fixed;
+  top: 20px;
+  left: 5vw;
+  z-index: 1000;
+  
+  /* Layout interno */
+  display: flex;
+  padding: 5px;
+  gap: 5px;
+}
+
+#selector-tema input[type="radio"] {
+  display: none;
+}
+
+.opcion-tema {
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 50%;
+  color: var(--color-texto);
+
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.opcion-tema:hover {
+  background: var(--color-vidrio-hover);
+  opacity: 1;
+}
+
+.opcion-tema img {
+  width: 20px;      
+  height: 20px;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;    
+}
+
+.opcion-tema:hover img {
+  opacity: 1; 
+}
+
+#selector-tema input[type="radio"]:checked + .opcion-tema {
+  background: var(--color-vidrio-hover);
+  color: var(--color-fondo-oscuro); 
+  transform: scale(1.1); /* Crece un poquito */
+}
+
 #nav {
   /* Efecto Vidrio */
   background: var(--color-vidrio); 
