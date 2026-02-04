@@ -1,10 +1,21 @@
+/* Valores por defecto (Modo Oscuro) */
 :root {
-	--color-fondo-oscuro: #000504;
-	--color-primario: #06372C;
-	--color-secundario: #6CEFD2;
-	--color-texto: #D7FDF0;
-  --color-vidrio: #ffffff0d;
-  --color-vidrio-hover: #ffffff26;
+    --color-fondo: #000504;
+    --color-primario: #06372C;
+    --color-secundario: #6CEFD2;
+    --color-texto: #D7FDF0;
+    --color-vidrio: #ffffff0d;       /* Vidrio blanco sutil */
+    --color-vidrio-hover: #ffffff26; /* Vidrio blanco más fuerte */
+}
+
+/* Valores para el Modo Claro */
+[data-theme="light"] {
+    --color-fondo: #f0fdfa;   
+    --color-primario: #6CEFD2;       
+    --color-secundario: #06372C;     /* Color oscuro para contrastar */
+    --color-texto: #001a15;          
+    --color-vidrio: #0000000d;       /* Vidrio negro sutil */
+    --color-vidrio-hover: #0000001a; /* Vidrio negro más fuerte */
 }
 
 * {
@@ -18,7 +29,7 @@
 
 /* 2. El fondo por donde corre la barra */
 ::-webkit-scrollbar-track {
-  background: var(--color-fondo-oscuro);
+  background: var(--color-fondo);
 }
 
 /* 3. La "pastilla" que se arrastra */
@@ -124,7 +135,7 @@ main {
 
 #selector-tema input[type="radio"]:checked + .opcion-tema {
   background: var(--color-vidrio-hover);
-  color: var(--color-fondo-oscuro); 
+  color: var(--color-fondo); 
   transform: scale(1.1); /* Crece un poquito */
 }
 
@@ -205,7 +216,7 @@ body {
   margin: 0%;
   width: 100%;
   min-height: 100vh;
-  background-color: var(--color-fondo-oscuro);
+  background-color: var(--color-fondo);
   background-image: 
     radial-gradient(circle at 10% 20%, #6cefd226 0%, transparent 50%),
     radial-gradient(circle at 90% 80%, #06372c80 0%, transparent 50%);
