@@ -341,10 +341,12 @@ input.glass-style:hover, textarea.glass-style:hover {
 }
 
 .titulo-proyecto {
-  font-size: 0.8em;
-  font-weight: normal;
-  margin-top: 15px;
+  font-size: 15px;       
+  font-weight: bold;     
+  text-shadow: none;   
+  margin-top: 15px; 
   text-align: center;
+  color: var(--color-texto);
 }
 
 #titulo-contacto {
