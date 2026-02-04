@@ -151,6 +151,37 @@ input.glass-style:hover, textarea.glass-style:hover {
   width: 300px;
   height: 350px;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+
+#div-imagen::after {
+  content: ''; /* Necesario para que el elemento exista */
+  position: absolute;
+  top: 0;
+  left: -150%; /* Empieza escondido muy a la izquierda */
+  width: 100%;
+  height: 100%;
+  
+  background: linear-gradient(
+    120deg, 
+    transparent 0%, 
+    #ffffff66 50%, 
+    transparent 100%
+  );
+  
+  /* Inclino la barra de luz para que se vea más dinámica */
+  transform: skewX(-25deg);
+}
+
+@keyframes brilloPasando {
+  0% { left: -150%; }
+  100% { left: 150%; } 
+}
+
+#div-imagen:hover::after {
+  animation: brilloPasando 0.7s ease-in-out;
 }
 
 #imagen-personal {
