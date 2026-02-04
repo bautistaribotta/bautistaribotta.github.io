@@ -320,7 +320,7 @@ input.glass-style:hover, textarea.glass-style:hover {
   height: 320px;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: flex-start; 
   align-items: center;     
   gap: 20px;               
   margin-top: 5vh;
@@ -331,18 +331,20 @@ input.glass-style:hover, textarea.glass-style:hover {
 }
 
 .img-proyecto {
-  width: 180px;            
-  height: 180px;           
-  object-fit: cover;       /* Recorta la imagen para llenar el cuadrado sin estirarse */
-  object-position: top;    
+  width: 180px;
+  height: 180px;
+  object-fit: cover; /* Recorta la imagen para llenar el cuadrado sin estirarse */
+  object-position: top;
+  margin-top: 20px;    
   border-radius: 8px;
-  box-shadow: 2px 2px 40px 0px #061a0083; 
+  box-shadow: 2px 2px 40px 0px #061a0083;
 }
 
 .titulo-proyecto {
-  font-size: 0.8em;        
+  font-size: 0.8em;
   font-weight: normal;
-  margin: 0;              
+  margin-top: 15px;
+  text-align: center;
 }
 
 #titulo-contacto {
