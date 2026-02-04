@@ -70,22 +70,31 @@ a {
 }
 
 #nav {
+  /* Efecto Vidrio */
   background: var(--color-vidrio); 
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* Por si lo abren en safari */
-  border-bottom: 1px solid #ffffff1a;
-  color: var(--color-texto);
+  -webkit-backdrop-filter: blur(10px);
+  
+  /* Estilo Isla */
+  border: 1px solid #ffffff1a;
+  border-radius: 50px; 
+  
+  /* Posición y Tamaño */
+  width: fit-content;       /* Se ajusta al tamaño de los botones */
+  height: auto;             
+  padding: 15px 50px;       
+  
+  /* Centrado y Flotación */
+  position: sticky;
+  top: 20px;                
+  margin-top: 20px;         
+  z-index: 1000;
+  
+  /* Alineación del contenido */
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 0 2vw;
-  box-sizing: border-box;
-  height: 10vh;
-  width: 100%;
-  position: sticky; /* Que la barra se quede pegada */
-  top: 0; /* Le indica que se quede pegado cuando llegue al borde superior */
-  z-index: 1000; /* Asegura que la barra flote por encima de cualquier otro contenido */
+  color: var(--color-texto);
 }
 
 #botones-navegacion {
