@@ -106,6 +106,17 @@ main {
   font-size: 1.2rem;
 }
 
+.opcion-tema img {
+  width: 16px;  /* Antes 20px -> Ahora levemente más chicos */
+  height: 16px;
+  
+  transition: transform 0.3s ease;
+  
+  /* Truco para generar un contorno blanco en imágenes .svg externas */
+  /* Los valores son: desplazamiento-x, desplazamiento-y, desenfoque, color */
+  filter: drop-shadow(0 0 1px white); 
+}
+
 .opcion-tema:hover {
   background: var(--color-vidrio-hover);
   opacity: 1;
