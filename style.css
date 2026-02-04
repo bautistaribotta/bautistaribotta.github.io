@@ -32,6 +32,31 @@
   background: var(--color-primario);
 }
 
+.glass-style {
+  color: var(--color-texto);
+  background: var(--color-vidrio);               /* Blanco muy transparente */
+  backdrop-filter: blur(10px);           /* Desenfoca lo que hay detrás */
+  -webkit-backdrop-filter: blur(10px);   /* Soporte para Safari */
+  border: 1px solid #ffffff1a;         /* Borde sutil para definir la caja */
+  border-radius: 15px;                   /* Bordes redondeados */
+  box-shadow: 0 4px 15px #0000005d;    /* Sombra para profundidad */
+  text-align: center;
+  transition: transform 0.3s ease;
+  resize: none
+}
+
+.glass-style:not(footer):hover {
+  cursor: pointer;
+  background: var(--color-vidrio-hover);    /* Se ilumina un poco más */
+  transform: translateY(-5px);              /* Se levanta un poco */
+  border-color: var(--color-secundario);
+}
+
+input.glass-style:hover, textarea.glass-style:hover {
+  transform: none;
+  cursor: text;    
+}
+
 html {
   scroll-behavior: smooth; /* Animacion lenta para desplazarte */
   scroll-padding-top: 10vh; /* Para que la barra de navegacion no tape etiquetes al desplazarse */
@@ -113,32 +138,6 @@ a {
   box-shadow: none !important;
   border-color: transparent !important;
   transform: translateY(-2px);
-}
-
-.glass-style {
-  color: var(--color-texto);
-  background: var(--color-vidrio);               /* Blanco muy transparente */
-  backdrop-filter: blur(10px);           /* Desenfoca lo que hay detrás */
-  -webkit-backdrop-filter: blur(10px);   /* Soporte para Safari */
-  border: 1px solid #ffffff1a;         /* Borde sutil para definir la caja */
-  border-radius: 15px;                   /* Bordes redondeados */
-  box-shadow: 0 4px 15px #0000005d;    /* Sombra para profundidad */
-  text-align: center;
-  transition: transform 0.3s ease;
-  resize: none
-}
-
-.glass-style:not(footer):hover {
-  cursor: pointer;
-  background: var(--color-vidrio-hover);                /* Se ilumina un poco más */
-  transform: translateY(-5px);            /* Se levanta un poco */
-  border-color: var(--color-secundario);
-  box-shadow: 0 0 15px var(--color-texto);
-}
-
-input.glass-style:hover, textarea.glass-style:hover {
-  transform: none;
-  cursor: text;    
 }
 
 #nombre {
@@ -285,14 +284,14 @@ input.glass-style:hover, textarea.glass-style:hover {
 }
 
 #stack div {
-  background: var(--color-vidrio); /* Blanco muy transparente */
+  background: var(--color-vidrio);       /* Blanco muy transparente */
   backdrop-filter: blur(10px);           /* Desenfoca lo que hay detrás */
   -webkit-backdrop-filter: blur(10px);   /* Soporte para Safari */
   
-  border: 1px solid #ffffff1a; /* Borde sutil para definir la caja */
+  border: 1px solid #ffffff1a;         /* Borde sutil para definir la caja */
   border-radius: 15px;                   /* Bordes redondeados */
   padding: 20px;                         /* Espacio interno */
-  box-shadow: 0 4px 15px #0000005d; /* Sombra para profundidad */
+  box-shadow: 0 4px 15px #0000005d;    /* Sombra para profundidad */
   margin-bottom: 100px;
   
   /* Para asegurar que sean uniformes */
@@ -305,7 +304,6 @@ input.glass-style:hover, textarea.glass-style:hover {
   background: var(--color-vidrio-hover);    /* Se ilumina un poco más */
   transform: translateY(-5px);              /* Se levanta un poco */
   border-color: var(--color-secundario);
-  box-shadow: 0 0 15px var(--color-texto);
 }
 
 #titulo-proyectos {
