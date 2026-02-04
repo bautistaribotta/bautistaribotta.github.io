@@ -29,7 +29,7 @@
 
 /* 4. Efecto al pasar el mouse por encima de la barra */
 ::-webkit-scrollbar-thumb:hover {
-  background: #5aceb3;
+  background: var(--color-primario);
 }
 
 html {
@@ -384,7 +384,7 @@ input.glass-style:hover, textarea.glass-style:hover {
   height: 180px;
   object-fit: cover; /* Recorta la imagen para llenar el cuadrado sin estirarse */
   object-position: top;
-  margin-top: 20px;    
+  margin-top: 30px;    
   border-radius: 8px;
   box-shadow: 2px 2px 40px 0px #061a0083;
 }
