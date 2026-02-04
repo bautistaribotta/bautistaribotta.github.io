@@ -21,7 +21,11 @@
   <body>
     
     <div id="selector-tema">
+      <input type="radio" id="modo-claro" name="tema" value="light" onclick="setTheme('light')">
+      <label for="modo-claro" class="opcion-tema"> <i class="devicon-android-plain"> </i> </label>
 
+      <input type="radio" id="modo-oscuro" name="tema" value="dark" checked onclick="setTheme('dark')">
+      <label for="modo-oscuro" class="opcion-tema"> <i class="devicon-linux-plain"> </i> </label>
     </div>
     
     <nav id="nav">  
