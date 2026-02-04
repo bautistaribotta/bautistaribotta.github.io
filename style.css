@@ -311,7 +311,7 @@ input.glass-style:hover, textarea.glass-style:hover {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-240px * 2 - 100px)); 
+    transform: translateX(calc(-290px * 6)); 
   }
 }
 
