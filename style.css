@@ -204,7 +204,8 @@ input.glass-style:hover, textarea.glass-style:hover {
   width: 300px;
   background-color: transparent;
   font-family: "Inter", sans-serif;
-  font-size: 12px;
+  font-size: 0.3em;
+  font-weight: normal;
 }
 
 #linkedin, #github {
