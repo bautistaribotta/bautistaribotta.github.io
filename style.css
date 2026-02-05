@@ -17,11 +17,17 @@
 /* Valores para el Modo Claro */
 [data-theme="light"] {
     --color-fondo: #f0fdfa;   
-    --color-primario: #6CEFD2;       
-    --color-secundario: #06372C;     /* Color oscuro para contrastar */
+    --color-primario: #06372C;       
+    --color-secundario: #0fa983;     
     --color-texto: #001a15;          
-    --color-vidrio: #0000000d;       /* Vidrio negro sutil */
-    --color-vidrio-hover: #0000001a; /* Vidrio negro más fuerte */
+    --color-vidrio: #06372c0d;       
+    --color-vidrio-hover: #06372c1a; 
+    --color-borde-vidrio: #06372c26; 
+    --color-box-shadow-1: #06372c14;
+    --color-box-shadow-2: #06372c40; /* Sombra más fuerte para fotos */
+    --gradiante-1: #6cefd2; 
+    --gradiante-2: #14b8a680;
+    --gradiante-3: #ffffff; /* El brillo que pasa sobre la foto */
 }
 
 * {
