@@ -1,4 +1,4 @@
-/* Valores por defecto (Modo Oscuro) */
+/* Valores por defecto - Modo Oscuro */
 :root {
     --color-fondo: #000504;
     --color-primario: #06372C;
@@ -6,6 +6,12 @@
     --color-texto: #D7FDF0;
     --color-vidrio: #ffffff0d;       /* Vidrio blanco sutil */
     --color-vidrio-hover: #ffffff26; /* Vidrio blanco más fuerte */
+    --color-borde-vidrio: #ffffff1a;
+    --color-box-shadow-1: #0000005d;
+    --color-box-shadow-2: #061a0083;
+    --gradiante-1: #6cefd226;
+    --gradiante-2: #06372c80;
+    --gradiante-3: #ffffff66;
 }
 
 /* Valores para el Modo Claro */
@@ -46,11 +52,11 @@
 .glass-style {
   color: var(--color-texto);
   background: var(--color-vidrio);               /* Blanco muy transparente */
-  backdrop-filter: blur(10px);           /* Desenfoca lo que hay detrás */
-  -webkit-backdrop-filter: blur(10px);   /* Soporte para Safari */
-  border: 1px solid #ffffff1a;         /* Borde sutil para definir la caja */
-  border-radius: 15px;                   /* Bordes redondeados */
-  box-shadow: 0 4px 15px #0000005d;    /* Sombra para profundidad */
+  backdrop-filter: blur(10px);                   /* Desenfoca lo que hay detrás */
+  -webkit-backdrop-filter: blur(10px);           /* Soporte para Safari */
+  border: 1px solid var(--color-borde-vidrio);   /* Borde sutil para definir la caja */
+  border-radius: 15px;                           /* Bordes redondeados */
+  box-shadow: 0 4px 15px var(--color-box-shadow-1);            /* Sombra para profundidad */
   text-align: center;
   transition: transform 0.3s ease;
   resize: none
@@ -85,7 +91,7 @@ main {
   background: var(--color-vidrio);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid #ffffff1a;
+  border: 1px solid var(--color-borde-vidrio);
   border-radius: 50px;
   
   /* Posición fija */
@@ -146,7 +152,7 @@ main {
   -webkit-backdrop-filter: blur(10px);
   
   /* Estilo Isla */
-  border: 1px solid #ffffff1a;
+  border: 1px solid var(--color-borde-vidrio);
   border-radius: 50px; 
   
   /* Posición y Tamaño */
@@ -199,7 +205,7 @@ a {
   background-color: var(--color-vidrio); /* Para Safari */
 
   /* Estilo Isla */
-  border: 1px solid #ffffff1a;
+  border: 1px solid var(--color-borde-vidrio);
   border-radius: 50px; 
 
 
@@ -218,8 +224,8 @@ body {
   min-height: 100vh;
   background-color: var(--color-fondo);
   background-image: 
-    radial-gradient(circle at 10% 20%, #6cefd226 0%, transparent 50%),
-    radial-gradient(circle at 90% 80%, #06372c80 0%, transparent 50%);
+    radial-gradient(circle at 10% 20%, var(--gradiante-1) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, var(--gradiante-2) 0%, transparent 50%);
   background-attachment: fixed; /* Fondo fijo */
 }
 
@@ -258,7 +264,7 @@ body {
   background: linear-gradient(
     120deg, 
     transparent 0%, 
-    #ffffff66 50%, 
+    var(--gradiante-3) 50%, 
     transparent 100%
   );
   
@@ -282,7 +288,7 @@ body {
   border-radius: 8px;
   object-fit: cover;
   object-position: center;
-  box-shadow: 2px 2px 80px 0px #061a0083;
+  box-shadow: 2px 2px 80px 0px var(--color-box-shadow-2);
 }
 
 #div-imagen:hover {
@@ -371,10 +377,10 @@ body {
   backdrop-filter: blur(10px);           /* Desenfoca lo que hay detrás */
   -webkit-backdrop-filter: blur(10px);   /* Soporte para Safari */
   
-  border: 1px solid #ffffff1a;         /* Borde sutil para definir la caja */
+  border: 1px solid var(--color-borde-vidrio);         /* Borde sutil para definir la caja */
   border-radius: 15px;                   /* Bordes redondeados */
   padding: 20px;                         /* Espacio interno */
-  box-shadow: 0 4px 15px #0000005d;    /* Sombra para profundidad */
+  box-shadow: 0 4px 15px var(--color-box-shadow-1);    /* Sombra para profundidad */
   margin-bottom: 100px;
   
   /* Para asegurar que sean uniformes */
@@ -467,7 +473,7 @@ body {
   object-position: top;
   margin-top: 30px;    
   border-radius: 8px;
-  box-shadow: 2px 2px 40px 0px #061a0083;
+  box-shadow: 2px 2px 40px 0px var(--color-box-shadow-2);
 }
 
 .titulo-proyecto {
@@ -480,7 +486,7 @@ body {
 }
 
 #titulo-contacto {
-  color: #D7FDF0;
+  color: var(--color-texto);
   margin: 15vh 0px 5vh 0vw;
   display: flex;
   flex-direction: row;
@@ -497,8 +503,8 @@ body {
   color: var(--color-texto);
   border-radius: 15px;                 /* Bordes redondeados */
   font-family: "Inter", sans-serif;
-  box-shadow: 0 4px 15px #00000033; /* Sombra para profundidad */
-  border: 1px solid #ffffff1a;      /* Borde sutil para definir la caja */
+  box-shadow: 0 4px 15px var(--color-box-shadow-1); /* Sombra para profundidad */
+  border: 1px solid var(--color-borde-vidrio);      /* Borde sutil para definir la caja */
 }
 
 #cuadro-principal p {
@@ -573,7 +579,7 @@ footer.glass-style {
   display: flex;
   flex-direction: column;
   
-  border: 1px solid #ffffff26; 
+  border: 1px solid var(--color-vidrio-hover); 
   
   margin-right: 12px;
   flex-shrink: 0;
@@ -591,15 +597,15 @@ footer.glass-style {
   justify-content: center;
   align-items: center;
   
-  border-top: 1px solid #ffffff26;
-  border-bottom: 1px solid #ffffff26;
+  border-top: 1px solid var(--color-vidrio-hover);
+  border-bottom: 1px solid var(--color-vidrio-hover);
 }
 
 .sol-glass {
   width: 6px;   
   height: 6px;
   background: transparent;
-  border: 1px solid #ffffff33;
+  border: 1px solid var(--color-vidrio-hover);
   border-radius: 50%;
   
   position: relative;
