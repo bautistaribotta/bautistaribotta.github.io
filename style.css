@@ -642,7 +642,6 @@ footer.glass-style {
 
 
 @media (max-width: 768px) {
-    
     /* 1. Ajustar la presentación (Foto y Texto) */
     #presentacion-foto {
         flex-direction: column; /* Pone la foto arriba del texto en vez de al lado */
@@ -683,4 +682,8 @@ footer.glass-style {
         gap: 15px;
         font-size: 0.8rem;
     }
+}
+
+@media (max-width: 576px) {
+  
 }
