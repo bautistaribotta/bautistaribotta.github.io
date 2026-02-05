@@ -29,7 +29,7 @@
     --gradiante-2: #14b8a680;
     --gradiante-3: #ffffff; /* El brillo que pasa sobre la foto */
 }
-
+    
 * {
   box-sizing: border-box;
 }
@@ -636,4 +636,51 @@ footer.glass-style {
 
 #derechos {
   font-family: monospace;
+}
+
+
+
+
+@media (max-width: 768px) {
+    
+    /* 1. Ajustar la presentación (Foto y Texto) */
+    #presentacion-foto {
+        flex-direction: column; /* Pone la foto arriba del texto en vez de al lado */
+        height: auto;
+    }
+
+    #texto-presentacion {
+        padding-top: 20px;
+        align-items: center; /* Centra el texto */
+        text-align: center;
+        font-size: 30px; /* Texto más chico */
+    }
+
+    /* 2. Ajustar el Stack (Habilidades) */
+    #stack {
+        flex-wrap: wrap; /* Permite que los iconos bajen si no entran */
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    #stack div {
+        margin-bottom: 20px; /* Menos espacio entre items */
+        min-width: 80px;     /* Cajitas más chicas */
+    }
+
+    /* 3. Ajustar el Formulario de Contacto */
+    #cuadro-principal, #titulo-contacto {
+        width: 90vw; /* Que ocupe casi toda la pantalla en celular */
+    }
+    
+    /* 4. Ajustar Navegación */
+    #nav {
+        padding: 10px 20px;
+        width: 90%;
+    }
+    
+    #botones-navegacion {
+        gap: 15px;
+        font-size: 0.8rem;
+    }
 }
