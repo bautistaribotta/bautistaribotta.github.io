@@ -2,7 +2,7 @@
 :root {
     --color-fondo: #000504;
     --color-primario: #06372C;
-    --color-secundario: #6CEFD2;
+    --color-secundario: #D7FDF0;
     --color-texto: #D7FDF0;
     --color-vidrio: #ffffff0d;       /* Vidrio blanco sutil */
     --color-vidrio-hover: #ffffff26; /* Vidrio blanco más fuerte */
@@ -18,7 +18,7 @@
 [data-theme="light"] {
     --color-fondo: #f0fdfa;   
     --color-primario: #06372C;       
-    --color-secundario: #000000a8;     
+    --color-secundario: #000000;     
     --color-texto: #001a15;          
     --color-vidrio: #06372c0d;       
     --color-vidrio-hover: #06372c1a; 
