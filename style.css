@@ -12,6 +12,8 @@
     --gradiante-1: #6cefd226;
     --gradiante-2: #06372c80;
     --gradiante-3: #ffffff66;
+    --autofill-bg: #ffffff1a; 
+    --autofill-text: #ffffff;
 }
 
 /* Valores para el Modo Claro */
@@ -28,10 +30,25 @@
     --gradiante-1: #6cefd2; 
     --gradiante-2: #14b8a680;
     --gradiante-3: #ffffff; /* El brillo que pasa sobre la foto */
+    --autofill-bg: #06372c1a;
+    --autofill-text: #001a15;
 }
     
 * {
   box-sizing: border-box;
+}
+
+/* Esto apunta a los inputs cuando el navegador los autocompleta */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px var(--autofill-bg) inset !important;
+  -webkit-text-fill-color: var(--autofill-text) !important;
+  transition: background-color 5000s ease-in-out 0s;
+  backdrop-filter: blur(7.5px);
 }
 
 /* 1. El ancho total de la barra */
