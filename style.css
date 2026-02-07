@@ -655,48 +655,105 @@ footer.glass-style {
   font-family: monospace;
 }
 
-  /* TABLETS */
+/* TABLETS */
 @media (max-width: 768px) {
-    /* 1. Ajustar la presentación (Foto y Texto) */
-    #presentacion-foto {
-        flex-direction: column; /* Pone la foto arriba del texto en vez de al lado */
-        height: auto;
-    }
+  
+  /* --- 1. Títulos Centrados --- */
+  /* Afectamos a los contenedores de los títulos para que se centren */
+  #titulo-stack, #titulo-proyectos, #titulo-contacto {
+    justify-content: center !important; /* Fuerza el centrado flex */
+    width: 100%;         /* Ocupa todo el ancho */
+    margin-left: 0;      /* Quita el margen izquierdo de escritorio */
+    text-align: center;
+  }
 
-    #texto-presentacion {
-        padding-top: 20px;
-        align-items: center; /* Centra el texto */
-        text-align: center;
-        font-size: 30px; /* Texto más chico */
-    }
+  /* --- 2. Stack (Habilidades) Horizontal --- */
+  #stack {
+    display: flex;
+    flex-direction: row;       /* Forza la fila horizontal */
+    flex-wrap: nowrap;         /* IMPIDE que bajen de línea */
+    justify-content: space-between; /* Distribución uniforme */
+    gap: 10px;                 /* Espacio pequeño entre cajas para que entren */
+    width: 95%;                /* Usamos casi todo el ancho disponible */
+  }
 
-    /* 2. Ajustar el Stack (Habilidades) */
-    #stack {
-        flex-wrap: wrap; /* Permite que los iconos bajen si no entran */
-        justify-content: center;
-        gap: 20px;
-    }
-    
-    #stack div {
-        margin-bottom: 20px; /* Menos espacio entre items */
-        min-width: 80px;     /* Cajitas más chicas */
-    }
+  #stack div {
+    flex: 1;                   /* "mismo tamaño": Todos crecen igual */
+    min-width: 0;             /* Permite que se encojan si falta espacio */
+    padding: 10px 5px;         /* Padding reducido para que entren los 6 */
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #stack p {
+    font-size: 0.8rem;         /* Texto un poco más chico para que no se rompa */
+  }
 
-    /* 3. Ajustar el Formulario de Contacto */
-    #cuadro-principal, #titulo-contacto {
-        width: 90vw; /* Que ocupe casi toda la pantalla en celular */
-    }
-    
-    /* 4. Ajustar Navegación */
-    #nav {
-        padding: 10px 20px;
-        width: 90%;
-    }
-    
-    #botones-navegacion {
-        gap: 15px;
-        font-size: 0.8rem;
-    }
+  /* --- 3. Botón de Enviar Mensaje más ancho --- */
+  #boton-enviar-mensaje {
+    width: 50%;               /* Ocupa la mitad del contenedor (ajusta a gusto) */
+    min-width: 200px;         /* Asegura un tamaño mínimo legible */
+  }
+  
+  #container-boton-enviar {
+    justify-content: center;   /* Asegura que el botón quede al medio */
+    width: 100%;
+  }
+
+  /* --- Resto de ajustes previos (Navegación, Foto, etc.) --- */
+  #nav {
+    width: 90%;
+    padding: 10px 30px;
+  }
+  
+  #botones-navegacion {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0;
+    font-size: 0.9rem;
+  }
+
+  #selector-tema {
+    position: fixed;
+    top: auto;
+    left: auto;
+    bottom: 20px;
+    right: 20px;
+    padding: 8px;
+    transform: scale(0.9);
+    z-index: 1000;
+  }
+
+  #presentacion-foto {
+    flex-direction: column;
+    height: auto;
+    margin-top: 10vh;
+  }
+
+  #texto-presentacion {
+    padding-top: 20px;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    width: 100%;
+  }
+
+  #botones {
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto 0 auto;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  #cuadro-principal {
+    width: 90vw;
+    height: auto;
+    padding: 40px;
+  }
 }
 
 /* CELULARES */
