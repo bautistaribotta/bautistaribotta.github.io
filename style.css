@@ -14,6 +14,7 @@
     --gradiante-3: #ffffff66;
     --autofill-bg: #ffffff1a; 
     --autofill-text: #ffffff;
+    --color-borde-bandera: var(--color-vidrio-hover);
 }
 
 /* Valores para el Modo Claro */
@@ -32,6 +33,7 @@
     --gradiante-3: #ffffff;
     --autofill-bg: #06372c1a;
     --autofill-text: #001a15;
+    --color-borde-bandera: #000504;
 }
     
 * {
@@ -596,13 +598,17 @@ footer.glass-style {
   align-items: center;
 }
 
+#bandera {
+  color: var(--color-fondo);
+}
+
 .bandera-glass {
   width: 40px;
   height: 26px;
   display: flex;
   flex-direction: column;
   
-  border: 1px solid var(--color-vidrio-hover); 
+  border: 1px solid var(--color-borde-bandera);
   
   margin-right: 12px;
   flex-shrink: 0;
@@ -620,15 +626,15 @@ footer.glass-style {
   justify-content: center;
   align-items: center;
   
-  border-top: 1px solid var(--color-vidrio-hover);
-  border-bottom: 1px solid var(--color-vidrio-hover);
+  border-top: 1px solid var(--color-borde-bandera); 
+  border-bottom: 1px solid var(--color-borde-bandera);
 }
 
 .sol-glass {
   width: 6px;   
   height: 6px;
   background: transparent;
-  border: 1px solid var(--color-vidrio-hover);
+  border: 1px solid var(--color-borde-bandera);
   border-radius: 50%;
   
   position: relative;
@@ -643,7 +649,7 @@ footer.glass-style {
   width: 12px;      
   height: 12px;
   
-  border: 1px dashed #ffffff33; 
+  border: 1px dashed var(--color-borde-bandera);
   border-radius: 50%;
 }
 
