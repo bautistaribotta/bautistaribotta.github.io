@@ -701,7 +701,7 @@ footer.glass-style {
 
 /* CELULARES */
 @media (max-width: 576px) {
-  /* 2. Selector de tema: Movido abajo a la derecha (estilo app móvil) */
+  /* Selector de tema: Movido abajo a la derecha (estilo app móvil) */
   #selector-tema {
     position: fixed;
     top: auto;
@@ -712,7 +712,7 @@ footer.glass-style {
     transform: scale(0.9);
   }
 
-  /* 3. Presentación: Diseño vertical y botones apilados */
+  /* Presentación: Diseño vertical y botones apilados */
   #presentacion-foto {
     flex-direction: column;
     margin-top: 12vh;
@@ -753,7 +753,7 @@ footer.glass-style {
     font-size: 1rem;
   }
 
-  /* Los enlaces que contienen los botones de redes ocupan la mitad (menos el hueco) */
+  /* Los enlaces que contienen los botones de redes ocupan la mitad */
   #botones a {
     width: calc(50% - 6px);   /* 50% del ancho menos la mitad del gap */
     display: block;
@@ -765,7 +765,7 @@ footer.glass-style {
     font-size: 1.2rem;
   }
 
-  /* 4. Stack: Grilla de 3 columnas */
+  /* Stack: Grilla de 3 columnas */
   #stack {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -789,7 +789,7 @@ footer.glass-style {
     gap: 5px;
   }
 
-  /* 5. Proyectos: Scroll horizontal manual (Snap) */
+  /* Proyectos: Scroll horizontal manual (Snap) */
   /* Se desactiva la animación infinita para dar control táctil al usuario */
   #contenedor-proyectos {
     width: 100%;
@@ -820,7 +820,7 @@ footer.glass-style {
     aspect-ratio: 16/9;
   }
     
-  /* === SECCIÓN DE CONTACTO === */
+  /* Contacto */
   #titulo-contacto {
     width: 100%;
     margin: 64px 0 24px 0;
@@ -922,7 +922,7 @@ footer.glass-style {
     transform: scale(0.95);
   }
 
-  /* === FOOTER === */
+  /* Footer */
   footer {
     height: auto;
     padding: 32px 16px 16px;
@@ -933,7 +933,7 @@ footer.glass-style {
     margin-top: 0;
   }
 
-  /* Fila superior del footer con ubicación y tema */
+  /* Fila superior del footer con ubicación */
   footer > div:first-child {
     display: flex;
     justify-content: center;
