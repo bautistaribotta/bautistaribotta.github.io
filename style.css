@@ -4,8 +4,8 @@
     --color-primario: #06372C;
     --color-secundario: #D7FDF0;
     --color-texto: #D7FDF0;
-    --color-vidrio: #ffffff0d;       /* Vidrio blanco sutil */
-    --color-vidrio-hover: #ffffff26; /* Vidrio blanco más fuerte */
+    --color-vidrio: #ffffff0d;       
+    --color-vidrio-hover: #ffffff26; 
     --color-borde-vidrio: #ffffff1a;
     --color-box-shadow-1: #0000005d;
     --color-box-shadow-2: #061a0083;
@@ -26,10 +26,10 @@
     --color-vidrio-hover: #06372c1a; 
     --color-borde-vidrio: #00000049; 
     --color-box-shadow-1: #06372c14;
-    --color-box-shadow-2: #06372c40; /* Sombra más fuerte para fotos */
+    --color-box-shadow-2: #06372c40; 
     --gradiante-1: #6cefd2; 
     --gradiante-2: #14b8a680;
-    --gradiante-3: #ffffff; /* El brillo que pasa sobre la foto */
+    --gradiante-3: #ffffff;
     --autofill-bg: #06372c1a;
     --autofill-text: #001a15;
 }
