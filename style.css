@@ -658,8 +658,7 @@ footer.glass-style {
 /* TABLETS */
 @media (max-width: 768px) {
   
-  /* --- 1. Títulos Centrados --- */
-  /* Afectamos a los contenedores de los títulos para que se centren */
+  /* Títulos Centrados */
   #titulo-stack, #titulo-proyectos, #titulo-contacto {
     justify-content: center !important; /* Fuerza el centrado flex */
     width: 100%;         /* Ocupa todo el ancho */
@@ -667,18 +666,18 @@ footer.glass-style {
     text-align: center;
   }
 
-  /* --- 2. Stack (Habilidades) Horizontal --- */
+  /* Stack */
   #stack {
     display: flex;
-    flex-direction: row;       /* Forza la fila horizontal */
-    flex-wrap: nowrap;         /* IMPIDE que bajen de línea */
-    justify-content: space-between; /* Distribución uniforme */
-    gap: 10px;                 /* Espacio pequeño entre cajas para que entren */
-    width: 95%;                /* Usamos casi todo el ancho disponible */
+    flex-direction: row;      
+    flex-wrap: nowrap;         /* impide que bajen de línea */
+    justify-content: space-between;
+    gap: 10px;                 
+    width: 95%;                /* Uso casi todo el ancho disponible */
   }
 
   #stack div {
-    flex: 1;                   /* "mismo tamaño": Todos crecen igual */
+    flex: 1;                   
     min-width: 0;             /* Permite que se encojan si falta espacio */
     padding: 10px 5px;         /* Padding reducido para que entren los 6 */
     margin-bottom: 0;
@@ -692,18 +691,16 @@ footer.glass-style {
     font-size: 0.8rem;         /* Texto un poco más chico para que no se rompa */
   }
 
-  /* --- 3. Botón de Enviar Mensaje más ancho --- */
   #boton-enviar-mensaje {
-    width: 50%;               /* Ocupa la mitad del contenedor (ajusta a gusto) */
-    min-width: 200px;         /* Asegura un tamaño mínimo legible */
+    width: 50%;               
+    min-width: 200px;         
   }
   
   #container-boton-enviar {
-    justify-content: center;   /* Asegura que el botón quede al medio */
+    justify-content: center;   
     width: 100%;
   }
 
-  /* --- Resto de ajustes previos (Navegación, Foto, etc.) --- */
   #nav {
     width: 90%;
     padding: 10px 30px;
@@ -972,8 +969,8 @@ footer.glass-style {
   #boton-enviar-mensaje {
     width: 100%;
     height: 56px;
-    background: var(--color-primario);
-    color: #D7FDF0; /* Color claro forzado para que se vea bien en tema claro */
+    background: var(--color-vidrio);
+    color: var(--color-texto); /* Color claro forzado para que se vea bien en tema claro */
     font-size: 1rem;
     font-weight: 500;
     border-radius: 12px;
