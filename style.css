@@ -701,169 +701,282 @@ footer.glass-style {
 
 /* CELULARES */
 @media (max-width: 576px) {
+  /* 2. Selector de tema: Movido abajo a la derecha (estilo app móvil) */
+  #selector-tema {
+    position: fixed;
+    top: auto;
+    left: auto;
+    bottom: 20px;
+    right: 20px;
+    padding: 8px;
+    transform: scale(0.9);
+  }
+
+  /* 3. Presentación: Diseño vertical y botones apilados */
+  #presentacion-foto {
+    flex-direction: column;
+    margin-top: 12vh;
+    gap: 20px;
+  }
+
+  #div-imagen {
+    width: 200px;
+    height: 220px;
+    margin: 0;
+  }
+
+  #imagen-personal {
+    width: 180px;
+    height: 180px;
+  }
+
+  #texto-presentacion {
+    font-size: 36px;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  #botones {
+    flex-direction: row;      /* Alineación horizontal */
+    flex-wrap: wrap;          /* Permite que los elementos bajen de línea */
+    justify-content: space-between; /* Separa los botones de redes */
+    gap: 12px;                /* Espacio entre botones */
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  /* El botón de CV fuerza una línea completa */
+  #CV {
+    width: 100%;
+    height: 55px;
+    font-size: 1rem;
+  }
+
+  /* Los enlaces que contienen los botones de redes ocupan la mitad (menos el hueco) */
+  #botones a {
+    width: calc(50% - 6px);   /* 50% del ancho menos la mitad del gap */
+    display: block;
+  }
+
+  #linkedin, #github {
+    width: 100%;              /* Llenan el ancho de su enlace contenedor */
+    height: 55px;
+    font-size: 1.2rem;
+  }
+
+  /* 4. Stack: Grilla de 3 columnas */
+  #stack {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 90%;
+    margin-top: 5vh;
+  }
+
+  #stack div {
+    margin-bottom: 0;
+    min-width: auto;
+    width: 100%;
+    padding: 15px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #stack p {
+    font-size: 0.75rem;
+    gap: 5px;
+  }
+
+  /* 5. Proyectos: Scroll horizontal manual (Snap) */
+  /* Se desactiva la animación infinita para dar control táctil al usuario */
+  #contenedor-proyectos {
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 20px;
+  }
+
+  .slide-track {
+    animation: none;
+    width: max-content;
+    gap: 15px;
+    padding: 0 20px;
+  }
+
+  .card-proyecto {
+    scroll-snap-align: center;
+    min-width: 85vw; /* Ocupa casi todo el ancho de la pantalla */
+    height: auto;
+    padding-bottom: 20px;
+    margin: 0;
+  }
+
+  .img-proyecto {
+    width: 90%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
     
+  /* === SECCIÓN DE CONTACTO === */
+  #titulo-contacto {
+    width: 100%;
+    margin: 64px 0 24px 0;
+  }
 
-    /* === SECCIÓN DE CONTACTO === */
-    #titulo-contacto {
-        width: 100%;
-        margin: 64px 0 24px 0;
-    }
+  #titulo-contacto h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
 
-    #titulo-contacto h2 {
-        font-size: 1.5rem;
-        font-weight: 700;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
+  #cuadro-principal {
+    width: 100%;
+    height: auto;
+    padding: 24px;
+    margin-bottom: 64px;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient( to bottom, var(--color-vidrio), transparent);
+  }
 
-    #cuadro-principal {
-        width: 100%;
-        height: auto;
-        padding: 24px;
-        margin-bottom: 64px;
-        border-radius: 24px;
-        position: relative;
-        overflow: hidden;
-        background: linear-gradient(
-            to bottom,
-            var(--color-vidrio),
-            transparent
-        );
-    }
+  /* Efecto de luz de fondo */
+  #cuadro-principal::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 160px;
+    height: 160px;
+    background: var(--color-primario);
+    opacity: 0.1;
+    border-radius: 50%;
+    filter: blur(60px);
+    pointer-events: none;
+  }
 
-    /* Efecto de luz de fondo */
-    #cuadro-principal::before {
-        content: '';
-        position: absolute;
-        top: -80px;
-        right: -80px;
-        width: 160px;
-        height: 160px;
-        background: var(--color-primario);
-        opacity: 0.1;
-        border-radius: 50%;
-        filter: blur(60px);
-        pointer-events: none;
-    }
+  #cuadro-principal > * {
+    position: relative;
+    z-index: 10;
+  }
 
-    #cuadro-principal > * {
-        position: relative;
-        z-index: 10;
-    }
+  #nombre-input, #email, #mensaje {
+    margin-bottom: 16px;
+  }
 
-    #nombre-input, #email, #mensaje {
-        margin-bottom: 16px;
-    }
+  #nombre-input p, #email p, #mensaje p {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin: 0 0 4px 4px;
+  }
 
-    #nombre-input p, #email p, #mensaje p {
-        font-size: 0.875rem;
-        font-weight: 500;
-        margin: 0 0 4px 4px;
-    }
+  #input-nombre, #input-email {
+    width: 100%;
+    height: 48px;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
 
-    #input-nombre, #input-email {
-        width: 100%;
-        height: 48px;
-        padding: 12px 16px;
-        font-size: 1rem;
-        border-radius: 12px;
-        transition: all 0.3s ease;
-    }
+  #input-mensaje {
+    width: 100%;
+    height: 128px !important;
+    padding: 12px 16px !important;
+    font-size: 1rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
 
-    #input-mensaje {
-        width: 100%;
-        height: 128px !important;
-        padding: 12px 16px !important;
-        font-size: 1rem;
-        border-radius: 12px;
-        transition: all 0.3s ease;
-    }
+  #input-nombre:focus,
+  #input-email:focus,
+  #input-mensaje:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 2px var(--color-primario);
+  }
 
-    #input-nombre:focus,
-    #input-email:focus,
-    #input-mensaje:focus {
-        outline: none;
-        border-color: var(--color-primario);
-        box-shadow: 0 0 0 2px var(--color-primario);
-    }
+  #container-boton-enviar {
+    margin-top: 8px;
+  }
 
-    #container-boton-enviar {
-        margin-top: 8px;
-    }
+  #boton-enviar-mensaje {
+    width: 100%;
+    height: 56px;
+    background: var(--color-primario);
+    color: var(--color-secundario);
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--color-box-shadow-2);
+    margin: 0;
+    ransition: all 0.3s ease;
+  }
 
-    #boton-enviar-mensaje {
-        width: 100%;
-        height: 56px;
-        background: var(--color-primario);
-        color: var(--color-secundario);
-        font-size: 1rem;
-        font-weight: 500;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px var(--color-box-shadow-2);
-        margin: 0;
-        transition: all 0.3s ease;
-    }
+  #boton-enviar-mensaje:active {
+    transform: scale(0.95);
+  }
 
-    #boton-enviar-mensaje:active {
-        transform: scale(0.95);
-    }
+  /* === FOOTER === */
+  footer {
+    height: auto;
+    padding: 32px 16px 16px;
+    border-radius: 0;
+    border-top: 1px solid var(--color-borde-vidrio);
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 0;
+  }
 
-    /* === FOOTER === */
-    footer {
-        height: auto;
-        padding: 32px 16px 16px;
-        border-radius: 0;
-        border-top: 1px solid var(--color-borde-vidrio);
-        flex-direction: column;
-        gap: 16px;
-        margin-top: 0;
-    }
+  /* Fila superior del footer con ubicación y tema */
+  footer > div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
 
-    /* Fila superior del footer con ubicación y tema */
-    footer > div:first-child {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
+  #contenedor-ubicacion {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    background: var(--color-vidrio);
+    border: 1px solid var(--color-borde-vidrio);
+    border-radius: 8px;
+  }
 
-    #contenedor-ubicacion {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        padding: 6px 12px;
-        background: var(--color-vidrio);
-        border: 1px solid var(--color-borde-vidrio);
-        border-radius: 8px;
-    }
+  .bandera-glass {
+    width: 24px;
+    height: 16px;
+    border-radius: 2px;
+    opacity: 0.8;
+    margin: 0;
+  }
 
-    .bandera-glass {
-        width: 24px;
-        height: 16px;
-        border-radius: 2px;
-        opacity: 0.8;
-        margin: 0;
-    }
+  #ubicacion {
+    font-size: 0.75rem;
+    font-family: monospace;
+    margin: 0;
+  }
 
-    #ubicacion {
-        font-size: 0.75rem;
-        font-family: monospace;
-        margin: 0;
-    }
+  #derechos {
+    font-size: 0.75rem;
+    text-align: center;
+    opacity: 0.6;
+    margin: 0;
+  }
 
-    #derechos {
-        font-size: 0.75rem;
-        text-align: center;
-        opacity: 0.6;
-        margin: 0;
-    }
+  #derechos br {
+    display: inline;
+  }
 
-    #derechos br {
-        display: inline;
-    }
-
-    #derechos br::before {
-        content: ' ';
-    }
+  #derechos br::before {
+    content: ' ';
+  }
 }
