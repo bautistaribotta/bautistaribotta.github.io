@@ -755,6 +755,10 @@ footer.glass-style {
 
 /* CELULARES */
 @media (max-width: 576px) {
+  body {
+    background-color: var(--color-fondo);
+  }
+
   /* Selector de tema: Movido abajo a la derecha (estilo app móvil) */
   #selector-tema {
     position: fixed;
