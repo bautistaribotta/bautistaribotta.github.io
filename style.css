@@ -712,6 +712,12 @@ footer.glass-style {
     transform: scale(0.9);
   }
 
+  #titulo-stack, #titulo-proyectos, #titulo-contacto {
+    justify-content: center !important;
+    width: 100%;
+    margin-left: 0;
+  }
+
   /* Presentación: Diseño vertical y botones apilados */
   #presentacion-foto {
     flex-direction: column;
@@ -728,6 +734,7 @@ footer.glass-style {
   #imagen-personal {
     width: 180px;
     height: 180px;
+    object-fit: cover;
   }
 
   #texto-presentacion {
