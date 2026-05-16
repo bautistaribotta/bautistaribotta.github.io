@@ -61,14 +61,15 @@
       <nav class="mx-auto max-w-6xl px-6 py-4">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-4">
-            <a href="#">
-              <span>
-                <select name="Versionado" id="historial_versiones">
-                  <option value="Version 2">v2</option>
-                  <option value="Version 1">v1</option>
-                </select>
-              </span>
-            </a>
+            <div class="relative group">
+              <select name="Versionado" id="historial_versiones" class="appearance-none bg-fondo border border-borde rounded text-xs font-medium tracking-widest text-apagado-primer-plano pl-3 pr-8 py-1.5 cursor-pointer focus:outline-none focus:border-primario transition-all duration-300 hover:text-primario hover:border-primario">
+                <option value="Version 2" class="bg-fondo text-primer-plano">V2</option>
+                <option value="Version 1" class="bg-fondo text-primer-plano">V1</option>
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-apagado-primer-plano group-hover:text-primario transition-colors duration-300">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </div>
+            </div>
             <a href="#" class="text-lg font-medium tracking-tight text-primer-plano transition-colors hover:text-primario">
               <span class="text-primario">B</span>autista<span class="text-apagado-primer-plano font-light">.dev</span>
             </a>

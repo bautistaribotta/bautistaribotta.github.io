@@ -3,6 +3,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentYearEl = document.getElementById("current-year");
     if(currentYearEl) currentYearEl.textContent = new Date().getFullYear();
 
+    // Version Switcher
+    const versionSelect = document.getElementById("historial_versiones");
+    if (versionSelect) {
+        versionSelect.addEventListener("change", (e) => {
+            if (e.target.value === "Version 1") {
+                window.location.href = "v1/index.html";
+            }
+        });
+    }
+
     // Navbar scroll effect
     const header = document.getElementById("main-header");
     

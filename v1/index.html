@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Icono + Titulo -->
+    <title> Bautista's Portfolio </title>
+    <link rel="icon" type="image/svg+xml" href="img/icon-dev.svg">
+
+    <!-- Contenido en la busqueda en navegadores -->
+    <meta charset="UTF-8"> <title>Portafolio de Bautista Ribotta - Desarrollador de Software</title>
+    <meta name="description" content="Portafolio de Bautista Ribotta, estudiante avanzado de Ingeniería en Software.">
+    <meta name="author" content="Bautista Ribotta">
+    <meta name="keywords" content="Bautista Ribotta, Portafolio, Desarrollador, Software, Java, Python, Web">
+
+    <!-- Vista en previsualizacion al enviar la pagina por mensajeria -->
+    <meta property="og:title" content="Portafolio de Bautista Ribotta">
+    <meta property="og:description" content="Revisa mi portafolios">
+    <meta property="og:image" content="https://bautistaribotta.github.io/img/imagen-personal.webp"> <meta property="og:url" content="https://bautistaribotta.github.io/">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/svg+xml" href="img/icon-dev.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Iconos de tecnologias --> 
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    
+    <div id="selector-tema">
+      <input type="radio" id="modo-claro" name="tema" value="light" onclick="setTheme('light')">
+      <label for="modo-claro" class="opcion-tema"> <img src="img/sol.svg" alt="claro"> </i> </label>
+
+      <input type="radio" id="modo-oscuro" name="tema" value="dark" checked onclick="setTheme('dark')">
+      <label for="modo-oscuro" class="opcion-tema"> <img src="img/luna.svg" alt="oscuro"> </i> </label>
+
+    </div>
+
+    <div class="glass-style" id="selector-version">
+      <select id="historial_versiones" onchange="if(this.value === 'Version 2') window.location.href='../index.html'">
+        <option value="Version 1">V1 (Actual)</option>
+        <option value="Version 2">V2 (Nueva)</option>
+      </select>
+    </div>    
+    <nav id="nav">  
+      <div id="botones-navegacion">
+        <a href="#"> Inicio </a>
+        <a href="#titulo-stack"> Stack </a>
+        <a href="#titulo-proyectos"> Proyectos </a>
+        <a href="#titulo-contacto"> Contacto </a>
+      </div>
+    </nav>
+
+    <main>
+      <div id="presentacion-foto">
+        <div class="glass-style" id="div-imagen"> 
+          <img id="imagen-personal" src="img/imagen-personal.webp" alt="Bautista"> 
+        </div>
+        <div id="texto-presentacion">
+          <h1 id="saludo"> Hola, soy Bautista! </h1>
+        <div id="descripcion">
+          <p> Tengo 24 años, soy estudiante avanzado de </p>
+          <p> Ing. en Software en la universidad Siglo 21 </p>
+        </div>
+        <div id="botones"> 
+          <a id="CV" class="glass-style" href="archivos\cv.pdf" download="cv.pdf"> Descargar CV </a>
+
+          <a href="https://www.linkedin.com/in/bautistaribotta/" target="_blank" rel="noopener noreferrer"> <button id="linkedin" class="glass-style"> <i class="devicon-linkedin-plain"> </i> </button> </a>
+
+          <a href="https://github.com/bautistaribotta" target="_blank" rel="noopener noreferrer"> <button id="github" class="glass-style"> <i class="devicon-github-original"> </i> </button> </a>
+
+        </div>
+        </div>
+      </div>
+
+      <div id="titulo-stack">
+        <h2> Habilidades/Tecnologias </h2>
+      </div>
+
+      <div id="stack">
+        <div> <p> <i class="devicon-java-plain"></i> Java </p> </div>
+        <div> <p> <i class="devicon-python-plain"></i> Python </p> </div>
+        <div> <p> <i class="devicon-mysql-original"></i> MySQL </p> </div>
+        <div> <p> <i class="devicon-github-original"></i> GitHub </p> </div>
+        <div> <p> <i class="devicon-html5-plain"></i> HTML </p> </div>
+        <div> <p> <i class="devicon-css3-plain"></i> CSS </p> </div>
+      </div>
+
+
+      <div id="titulo-proyectos">
+        <h2> Proyectos </h2>
+      </div>
+      <div id="contenedor-proyectos">
+        <div class="slide-track">
+          <a href="https://github.com/bautistaribotta/acopiadora_de_miel" target="_blank" rel="noopener noreferrer" class="glass-style card-proyecto">
+            <img src="img/captura-acopiadora-miel.webp" alt="Sistema Acopiadora" class="img-proyecto">
+            <h3 class="titulo-proyecto"> Acopiadora </h3>
+          </a>
+
+          <a href="https://github.com/bautistaribotta/bautistaribotta.github.io" target="_blank" rel="noopener noreferrer" class="glass-style card-proyecto">
+            <img src="img/captura-pagina-web.webp" alt="Pagina Web" class="img-proyecto">
+            <h3 class="titulo-proyecto"> Pagina web </h3>
+          </a>
+
+          <a href="https://github.com/bautistaribotta/southern_honey_group" target="_blank" rel="noopener noreferrer" class="glass-style card-proyecto">
+            <img src="img\captura-productora-de-miel-webapp.webp" alt="Pagina Southern Honey Group" class="img-proyecto">
+            <h3 class="titulo-proyecto"> Southern Group </h3>
+          </a>
+
+          <a href="https://github.com/bautistaribotta/bautistaribotta.github.io" target="_blank" rel="noopener noreferrer" class="glass-style card-proyecto">
+            <img src="img/captura-pagina-web.webp" alt="Pagina Web" class="img-proyecto">
+            <h3 class="titulo-proyecto"> Pagina web </h3>
+          </a>
+
+          <a href="https://github.com/bautistaribotta/acopiadora_de_miel" target="_blank" rel="noopener noreferrer" class="glass-style card-proyecto">
+            <img src="img/captura-acopiadora-miel.webp" alt="Sistema Acopiadora" class="img-proyecto">
+            <h3 class="titulo-proyecto"> Acopiadora </h3>
+          </a>
+
+          <a href="https://github.com/bautistaribotta/bautistaribotta.github.io" target="_blank" rel="noopener noreferrer" class="glass-style card-proyecto">
+            <img src="img/captura-pagina-web.webp" alt="Pagina Web" class="img-proyecto">
+            <h3 class="titulo-proyecto"> Pagina web </h3>
+          </a>
+
+          <a href="https://github.com/bautistaribotta/southern_honey_group" target="_blank" rel="noopener noreferrer" class="glass-style card-proyecto">
+            <img src="img\captura-productora-de-miel-webapp.webp" alt="Pagina Southern Honey Group" class="img-proyecto">
+            <h3 class="titulo-proyecto"> Southern Group </h3>
+          </a>
+
+          <a href="https://github.com/bautistaribotta/bautistaribotta.github.io" target="_blank" rel="noopener noreferrer" class="glass-style card-proyecto">
+            <img src="img/captura-pagina-web.webp" alt="Pagina Web" class="img-proyecto">
+            <h3 class="titulo-proyecto"> Pagina web </h3>
+          </a>
+
+          <a href="https://github.com/bautistaribotta/acopiadora_de_miel" target="_blank" rel="noopener noreferrer" class="glass-style card-proyecto">
+            <img src="img/captura-acopiadora-miel.webp" alt="Sistema Acopiadora" class="img-proyecto">
+            <h3 class="titulo-proyecto"> Acopiadora </h3>
+          </a>
+
+          <a href="https://github.com/bautistaribotta/bautistaribotta.github.io" target="_blank" rel="noopener noreferrer" class="glass-style card-proyecto">
+            <img src="img/captura-pagina-web.webp" alt="Pagina Web" class="img-proyecto">
+            <h3 class="titulo-proyecto"> Pagina web </h3>
+          </a>
+
+          <a href="https://github.com/bautistaribotta/southern_honey_group" target="_blank" rel="noopener noreferrer" class="glass-style card-proyecto">
+            <img src="img\captura-productora-de-miel-webapp.webp" alt="Pagina Southern Honey Group" class="img-proyecto">
+            <h3 class="titulo-proyecto"> Southern Group </h3>
+          </a>
+
+        </div>
+      </div>
+
+      <h2 id="titulo-contacto"> Contacto </h2>
+      <form id="cuadro-principal" action="https://formspree.io/f/xreagbrb" method="POST">
+
+        <div id="nombre-input"> 
+          <p> Nombre </p> <input type="text" class="glass-style" id="input-nombre" name="nombre" required> 
+        </div>
+
+        <div id="email"> 
+          <p> Email </p> <input type="email" class="glass-style" id="input-email" name="email" required>
+        </div>
+
+        <div id="mensaje"> 
+          <p> Mensaje </p> <textarea class="glass-style" id="input-mensaje" name="mensaje" required></textarea>
+        </div>
+        
+        <div id="container-boton-enviar">
+          <button type="submit" class="glass-style" id="boton-enviar-mensaje"> Enviar mensaje </button>
+        </div>
+
+      </form>
+
+    </main>
+
+    <footer class="glass-style">
+      <div id="contenedor-ubicacion">
+        <div class="bandera-glass" id="bandera">
+          <div class="franja-celeste"></div>
+
+          <div class="franja-blanca">
+            <div class="sol-glass"></div>
+          </div>
+
+          <div class="franja-celeste"></div>
+        </div>
+        <p id="ubicacion"> Córdoba, Argentina </p>
+      </div>
+
+      <p id="derechos"> © 2026 Bautista Ribotta </p>
+    </footer>
+
+    <!-- Codigo JS para cambiar entre el modo oscuro y claro -->
+    <script>
+      function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+    </script>
+
+    <!-- Codigo JS para las funcionalidades del email -->
+    <script>
+      const form = document.getElementById("cuadro-principal");
+
+      async function handleSubmit(event) {
+        event.preventDefault(); // Evita que la página se recargue
+        const status = document.getElementById("boton-enviar-mensaje");
+        const data = new FormData(event.target);
+
+        fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: {
+            'Accept': 'application/json'
+          }
+        }).then(response => {
+          if (response.ok) {
+            status.innerHTML = "¡Mensaje enviado!";
+            form.reset(); // Limpia los campos
+          } else {
+            status.innerHTML = "Hubo un error, intenta de nuevo.";
+          }
+        }).catch(error => {
+          status.innerHTML = "Error de conexión.";
+        });
+      }
+
+      form.addEventListener("submit", handleSubmit);
+    </script>
+
+  </body>
+</html>
