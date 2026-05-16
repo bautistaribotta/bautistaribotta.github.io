@@ -60,9 +60,19 @@
     <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent">
       <nav class="mx-auto max-w-6xl px-6 py-4">
         <div class="flex items-center justify-between">
-          <a href="#" class="text-lg font-medium tracking-tight text-primer-plano transition-colors hover:text-primario">
-            <span class="text-primario">B</span>autista<span class="text-apagado-primer-plano font-light">.dev</span>
-          </a>
+          <div class="flex items-center gap-4">
+            <a href="#">
+              <span>
+                <select name="Versionado" id="historial_versiones">
+                  <option value="Version 2">v2</option>
+                  <option value="Version 1">v1</option>
+                </select>
+              </span>
+            </a>
+            <a href="#" class="text-lg font-medium tracking-tight text-primer-plano transition-colors hover:text-primario">
+              <span class="text-primario">B</span>autista<span class="text-apagado-primer-plano font-light">.dev</span>
+            </a>
+          </div>
 
           <ul class="hidden md:flex items-center gap-8">
             <li><a href="#" class="nav-link text-sm tracking-wide transition-colors duration-300 text-apagado-primer-plano hover:text-primer-plano" data-target="">Inicio</a></li>
