@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: "Inter", "Inter Fallback", system-ui, sans-serif;
+  --font-serif: "Montserrat", "Montserrat Fallback", system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, monospace;
+      
+  /* Uso el sistema "oklch" para el color debido a que es el nuevo estandar en Tailwind v4 */
+  --color-fondo: oklch(0.13 0.02 160);
+  --color-primer-plano: oklch(0.95 0.02 160);
+  --color-card: oklch(0.15 0.025 160);
+  --color-card-primer-plano: oklch(0.95 0.02 160);
+  --color-primario: oklch(0.55 0.15 160);
+  --color-primario-primer-plano: oklch(0.98 0.01 160);
+  --color-secundario: oklch(0.25 0.03 160);
+  --color-secundario-primer-plano: oklch(0.9 0.02 160);
+  --color-apagado: oklch(0.2 0.02 160);
+  --color-apagado-primer-plano: oklch(0.65 0.02 160);
+  --color-acento: oklch(0.7 0.12 160);
+  --color-acento-primer-plano: oklch(0.13 0.02 160);
+  --color-borde: oklch(0.25 0.03 160);
+  --color-anillo-visual: oklch(0.55 0.15 160);
+    
+  --radius: 0.5rem;
+}
+    
+* { border-color: var(--color-borde); }
+  body {
+    background-color: var(--color-fondo);
+    color: var(--color-primer-plano);
+    font-family: var(--font-sans);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-fondo);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-borde);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primario);
+}
+
+/* Solución para el autocompletado del navegador (Autofill) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: var(--color-primer-plano) !important;
+}

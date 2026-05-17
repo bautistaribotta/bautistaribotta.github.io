@@ -764,7 +764,7 @@ footer.glass-style {
     top: auto;
     left: auto;
     bottom: 20px;
-    right: 80px;
+    right: 140px;
     padding: 5px;
     transform: scale(0.9);
     z-index: 1000;
@@ -821,7 +821,7 @@ footer.glass-style {
     top: auto;
     left: auto;
     bottom: 20px;
-    right: 80px;
+    right: 140px;
     padding: 5px;
     transform: scale(0.9);
   }
@@ -870,8 +870,10 @@ footer.glass-style {
 
   /* Los enlaces que contienen los botones de redes ocupan la mitad */
   #botones a {
-    width: calc(50% - 6px);   /* 50% del ancho menos la mitad del gap */
-    display: block;
+    width: calc(50% - 6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   #linkedin, #github {
@@ -1096,6 +1098,11 @@ footer.glass-style {
   #derechos br {
     display: inline;
   }
+
+  #derechos br::before {
+    content: ' ';
+  }
+}
 
   #derechos br::before {
     content: ' ';

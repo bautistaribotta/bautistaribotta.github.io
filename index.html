@@ -13,44 +13,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Tailwind CSS v4 via CDN -->
-  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-  
-  <!-- Tema personalizado de Tailwind -->
-  <style type="text/tailwindcss">
-    @theme inline {
-      --font-sans: "Inter", "Inter Fallback", system-ui, sans-serif;
-      --font-serif: "Montserrat", "Montserrat Fallback", system-ui, sans-serif;
-      --font-mono: ui-monospace, SFMono-Regular, monospace;
-      
-      /* Uso el sistema "oklch" para el color debido a que es el nuevo estandar en Tailwind v4 */
-      --color-fondo: oklch(0.13 0.02 160);
-      --color-primer-plano: oklch(0.95 0.02 160);
-      --color-card: oklch(0.15 0.025 160);
-      --color-card-primer-plano: oklch(0.95 0.02 160);
-      --color-primario: oklch(0.55 0.15 160);
-      --color-primario-primer-plano: oklch(0.98 0.01 160);
-      --color-secundario: oklch(0.25 0.03 160);
-      --color-secundario-primer-plano: oklch(0.9 0.02 160);
-      --color-apagado: oklch(0.2 0.02 160);
-      --color-apagado-primer-plano: oklch(0.65 0.02 160);
-      --color-acento: oklch(0.7 0.12 160);
-      --color-acento-primer-plano: oklch(0.13 0.02 160);
-      --color-borde: oklch(0.25 0.03 160);
-      --color-anillo-visual: oklch(0.55 0.15 160);
+  <link rel="stylesheet" href="/src/output.css">
 
-      --radius: 0.5rem;
-    }
-    
-    * { border-color: var(--color-borde); }
-    body {
-      background-color: var(--color-fondo);
-      color: var(--color-primer-plano);
-      font-family: var(--font-sans);
-    }
-  </style>
-
-  <link rel="stylesheet" href="style.css">
 </head>
 <body class="font-sans antialiased text-primer-plano bg-fondo">
   
@@ -108,7 +72,7 @@
     <!-- "HERO" -->
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
       <!-- Gradiante del fondo -->
-      <div class="absolute inset-0 bg-gradient-to-br from-fondo via-fondo to-card"></div>
+      <div class="absolute inset-0 bg-linear-to-br from-fondo via-fondo to-card"></div>
 
       <!-- Elementos decorativos -->
       <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primario/5 rounded-full blur-3xl"></div>
