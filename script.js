@@ -74,10 +74,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (visor && visorFoto) {
         const abrirVisor = (e) => {
-            // Las capturas estan dentro del enlace del proyecto: el clic no debe navegar.
+            // Evita que la barra espaciadora mueva la pagina al abrir con el teclado.
             e.preventDefault();
-            e.stopPropagation();
-            visorFoto.src = e.currentTarget.currentSrc || e.currentTarget.src;
+            visorFoto.src = e.currentTarget.dataset.grande;
             visorFoto.alt = e.currentTarget.alt;
             visor.showModal();
         };
