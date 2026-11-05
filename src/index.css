@@ -44,6 +44,8 @@
   --popover-foreground: oklch(0.985 0 0);
   --primary: oklch(0.985 0 0);
   --primary-foreground: oklch(0.145 0 0);
+  /* Fondo de los botones: separado de primary, que tambien se usa como color de texto */
+  --primary-solid: oklch(0.985 0 0);
   --secondary: oklch(0.235 0 0);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.205 0 0);
@@ -71,6 +73,7 @@
   --popover-foreground: oklch(0.95 0.02 160);
   --primary: oklch(0.55 0.15 160);
   --primary-foreground: oklch(0.98 0.01 160);
+  --primary-solid: oklch(0.52 0.14 160);
   --secondary: oklch(0.25 0.03 160);
   --secondary-foreground: oklch(0.9 0.02 160);
   --muted: oklch(0.2 0.02 160);
@@ -101,6 +104,7 @@
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+  --color-primary-solid: var(--primary-solid);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-muted: var(--muted);
