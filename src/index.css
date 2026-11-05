@@ -1,0 +1,187 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Ambos temas son oscuros, asi que la variante dark de shadcn siempre aplica */
+@custom-variant dark (&:is(*));
+
+/* Fuentes Geist (paquete npm "geist" de Vercel) */
+@font-face {
+  font-family: "Geist";
+  src: url("./fonts/Geist-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("./fonts/GeistMono-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Serif";
+  src: url("./fonts/GeistSerifVF.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*
+  Tema por defecto: "negro", inspirado en Vercel.
+  Fondo negro, texto blanco y grises neutros sin croma.
+*/
+:root {
+  --radius: 0.625rem;
+
+  --background: oklch(0 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.145 0 0);
+  --secondary: oklch(0.235 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.205 0 0);
+  --muted-foreground: oklch(0.67 0 0);
+  --accent: oklch(0.235 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(0.27 0 0);
+  --input: oklch(0.3 0 0);
+  --ring: oklch(0.556 0 0);
+
+  /* Tokens propios: color de realce (enlaces, acentos) y brillo decorativo */
+  --highlight: oklch(0.985 0 0);
+  --glow: oklch(1 0 0 / 0.06);
+  --grid-line: oklch(1 0 0 / 0.05);
+}
+
+/* Tema "verde": los colores originales del portafolio */
+:root[data-theme="verde"] {
+  --background: oklch(0.13 0.02 160);
+  --foreground: oklch(0.95 0.02 160);
+  --card: oklch(0.15 0.025 160);
+  --card-foreground: oklch(0.95 0.02 160);
+  --popover: oklch(0.15 0.025 160);
+  --popover-foreground: oklch(0.95 0.02 160);
+  --primary: oklch(0.55 0.15 160);
+  --primary-foreground: oklch(0.98 0.01 160);
+  --secondary: oklch(0.25 0.03 160);
+  --secondary-foreground: oklch(0.9 0.02 160);
+  --muted: oklch(0.2 0.02 160);
+  --muted-foreground: oklch(0.65 0.02 160);
+  --accent: oklch(0.25 0.03 160);
+  --accent-foreground: oklch(0.95 0.02 160);
+  --border: oklch(0.25 0.03 160);
+  --input: oklch(0.28 0.03 160);
+  --ring: oklch(0.55 0.15 160);
+
+  --highlight: oklch(0.7 0.12 160);
+  --glow: oklch(0.55 0.15 160 / 0.12);
+  --grid-line: oklch(0.7 0.12 160 / 0.06);
+}
+
+@theme inline {
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Geist Serif", "Times New Roman", serif;
+  /* Fuente de titulos: la unica linea que cambia entre las versiones */
+  --font-display: var(--font-sans);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-highlight: var(--highlight);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply scroll-smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    transition: background-color 300ms ease, color 300ms ease;
+  }
+
+  ::selection {
+    background: var(--primary);
+    color: var(--primary-foreground);
+  }
+}
+
+@layer components {
+  /* Cuadricula de fondo del hero, al estilo Vercel */
+  .fondo-cuadricula {
+    background-image:
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, oklch(0 0 0) 40%, transparent 100%);
+  }
+
+  .brillo {
+    background: radial-gradient(circle at center, var(--glow), transparent 70%);
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
+
+/* Solucion para el autocompletado del navegador (Autofill) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: var(--foreground) !important;
+}
