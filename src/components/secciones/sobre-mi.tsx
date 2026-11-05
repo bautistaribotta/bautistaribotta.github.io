@@ -9,13 +9,13 @@ const tarjetas = [
     titulo: "Educación",
     Icono: GraduationCap,
     texto:
-      "Actualmente estoy finalizando la carrera de Ingeniería en Software, aunque realicé múltiples cursos en plataformas como Platzi, Udemy, entre otras. Busco trabajar/colaborar con otros profesionales para seguir mejorando mis habilidades.",
+      "Estoy finalizando la carrera de Ingeniería en Software y complemento esa base con cursos en plataformas como Platzi y Udemy. Aplico lo que aprendo en proyectos propios y para clientes, y busco sumarme a un equipo donde seguir creciendo junto a otros profesionales.",
   },
   {
     titulo: "Enfoque",
     Icono: Target,
     texto:
-      "Me especializo en el desarrollo backend con Python y el framework de Django, aunque me gusta diseñar y escribir código front-end usando HTML, CSS, Tailwind y JavaScript. Tengo sólidas bases en desarrollo con IA, bases de datos SQL (MySQL y SQLite), sistemas de control de versiones con Git y metodologías ágiles.",
+      "Desarrollo aplicaciones web y mobile de punta a punta. Trabajo el backend con Python y Django, el frontend con React, TypeScript y Tailwind, y las apps mobile con React Native y Expo. Sumo herramientas de IA como Claude Code a mi flujo de trabajo para desarrollar más rápido.",
   },
 ]
 
@@ -26,8 +26,9 @@ export function SobreMi() {
         <TituloSeccion numero="01" titulo="Sobre mí" />
 
         <p className="font-display max-w-3xl text-xl leading-relaxed text-foreground md:text-2xl">
-          Soy un desarrollador de software con una fuerte pasión por crear aplicaciones completas,
-          encargándome tanto del front-end como del back-end y con una base en diseño UX/UI.
+          Soy desarrollador de software y construyo aplicaciones completas, de la base de datos a la
+          interfaz: desde sistemas de gestión para el sector apícola hasta apps mobile y sitios web
+          para clientes.
         </p>
 
         <div className="mt-12 grid gap-4 md:grid-cols-2">
