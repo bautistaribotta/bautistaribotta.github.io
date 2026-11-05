@@ -1,6 +1,6 @@
 # Portafolio - Bautista Ribotta
 
-Sitio web personal para la exhibición de proyectos y habilidades técnicas. Versión 3.0, migrada a React con componentes de shadcn/ui y un estilo inspirado en Vercel.
+Sitio web personal para la exhibición de proyectos y habilidades técnicas.
 
 ## Tecnologías
 
@@ -12,10 +12,8 @@ Sitio web personal para la exhibición de proyectos y habilidades técnicas. Ver
 
 ## Temas
 
-* **Negro** (por defecto): negro y blanco, al estilo Vercel.
-* **Verde**: la paleta original del portafolio.
-
-El selector está en la barra de navegación y la elección se guarda en el navegador.
+* **Negro**: negro y blanco, al estilo Vercel.
+* **Verde** (por defecto): la paleta original del portafolio.
 
 ## Desarrollo
 
@@ -23,8 +21,3 @@ El selector está en la barra de navegación y la elección se guarda en el nave
 npm install
 npm run dev
 ```
-
-## Publicación
-
-El sitio se compila con `npm run build` y se publica con el workflow `.github/workflows/deploy.yml`.
-En GitHub, la fuente de Pages tiene que estar en **Settings > Pages > Source: GitHub Actions**.
