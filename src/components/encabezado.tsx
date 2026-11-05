@@ -49,7 +49,10 @@ export function Encabezado({ tema, onCambiarTema }: Props) {
         )}
       >
         <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-          <a href="#" className="text-base font-semibold tracking-tight text-foreground">
+          <a
+            href="#"
+            className="text-base font-semibold tracking-tight text-foreground transition-colors hover:text-primary"
+          >
             <span className="text-primary">B</span>autista
             <span className="font-normal text-muted-foreground">.dev</span>
           </a>
