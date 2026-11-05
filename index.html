@@ -2,10 +2,56 @@
 <html lang="es" class="bg-fondo scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <title>Bautista Ribotta - Portafolio</title>
+  <title>Bautista Ribotta - Portafolios</title>
   <meta name="description" content="Portafolio de Bautista Ribotta, finalizando la carrera de Ingeniería en Software. Especializado en desarrollo de aplicaciones web y sistemas.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Bautista Ribotta">
+  <link rel="canonical" href="https://bautistaribotta.github.io/">
+
+  <!-- Vista previa al compartir -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Bautista Ribotta">
+  <meta property="og:url" content="https://bautistaribotta.github.io/">
+  <meta property="og:title" content="Bautista Ribotta - Portafolios">
+  <meta property="og:description" content="Portafolio de Bautista Ribotta, finalizando la carrera de Ingeniería en Software. Especializado en desarrollo de aplicaciones web y sistemas.">
+  <meta property="og:image" content="https://bautistaribotta.github.io/img/og-portafolio.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Bautista Ribotta, desarrollador full-stack">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bautista Ribotta - Portafolios">
+  <meta name="twitter:description" content="Portafolio de Bautista Ribotta, finalizando la carrera de Ingeniería en Software. Especializado en desarrollo de aplicaciones web y sistemas.">
+  <meta name="twitter:image" content="https://bautistaribotta.github.io/img/og-portafolio.png">
+
+  <!-- Datos estructurados -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Bautista Ribotta",
+      "url": "https://bautistaribotta.github.io/",
+      "image": "https://bautistaribotta.github.io/img/imagen-personal.webp",
+      "jobTitle": "Desarrollador full-stack",
+      "description": "Desarrollador full-stack especializado en backend con Python y Django, finalizando la carrera de Ingeniería en Software.",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Universidad Siglo 21"
+      },
+      "knowsAbout": [
+        "Python",
+        "Django",
+        "Java",
+        "TypeScript",
+        "React",
+        "React Native"
+      ],
+      "sameAs": [
+        "https://github.com/bautistaribotta",
+        "https://www.linkedin.com/in/bautistaribotta/"
+      ]
+    }
+  </script>
   
   <!-- Google Search Consola -->
   <meta name="google-site-verification" content="yF8rFaBtn4zVnRRlTDph6bcoUX1yrd6hr8QAO06quWU" />
@@ -27,20 +73,9 @@
     <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent">
       <nav class="mx-auto max-w-6xl px-6 py-4">
         <div class="flex items-center justify-between">
-          <div class="flex items-center gap-4">
-            <div class="relative group">
-              <select name="Versionado" id="historial_versiones" class="appearance-none bg-fondo border border-borde rounded text-xs font-medium tracking-widest text-apagado-primer-plano pl-3 pr-8 py-1.5 cursor-pointer focus:outline-none focus:border-primario transition-all duration-300 hover:text-primario hover:border-primario">
-                <option value="Version 2" class="bg-fondo text-primer-plano">V2</option>
-                <option value="Version 1" class="bg-fondo text-primer-plano">V1</option>
-              </select>
-              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-apagado-primer-plano group-hover:text-primario transition-colors duration-300">
-                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-              </div>
-            </div>
-            <a href="#" class="text-lg font-medium tracking-tight text-primer-plano transition-colors hover:text-primario">
-              <span class="text-primario">B</span>autista<span class="text-apagado-primer-plano font-light">.dev</span>
-            </a>
-          </div>
+          <a href="#" class="text-lg font-medium tracking-tight text-primer-plano transition-colors hover:text-primario">
+            <span class="text-primario">B</span>autista<span class="text-apagado-primer-plano font-light">.dev</span>
+          </a>
 
           <ul class="hidden md:flex items-center gap-8">
             <li><a href="#" class="nav-link text-sm tracking-wide transition-colors duration-300 text-apagado-primer-plano hover:text-primer-plano" data-target="">Inicio</a></li>
@@ -81,7 +116,7 @@
       <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primario/5 rounded-full blur-3xl"></div>
       <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-acento/5 rounded-full blur-3xl"></div>
 
-      <div class="relative z-10 mx-auto max-w-6xl px-6 py-32 md:py-40">
+      <div class="relative z-10 mx-auto w-full max-w-6xl px-6 py-32 md:py-40">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           
           <!-- Contenido en texto -->
@@ -131,7 +166,7 @@
                 <div class="absolute -bottom-4 -right-4 w-full h-full bg-card/50 transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2"></div>
 
                 <div class="absolute inset-0 z-10 overflow-hidden bg-apagado">
-                  <img src="img/imagen-personal.webp" alt="Bautista Ribotta" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                  <img width="720" height="1280" fetchpriority="high" src="img/imagen-personal.webp" alt="Bautista Ribotta" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                 </div>
 
                 <!-- Overlay de ubicacion -->
@@ -313,7 +348,7 @@
             <a href="https://github.com/bautistaribotta/southern_honey_group" target="_blank" rel="noopener noreferrer" class="group block">
               <article class="grid md:grid-cols-12 gap-6 py-8 border-b border-borde transition-colors hover:border-primario">
                 <div class="md:col-span-2">
-                  <img src="/img/captura-productora-de-miel-webapp.webp" alt="Imagen Southern Honey Group">
+                  <img src="/img/captura-productora-de-miel-webapp.webp" alt="Imagen Southern Honey Group" width="1365" height="606" loading="lazy" decoding="async" data-ampliable role="button" tabindex="0" aria-label="Ampliar captura: Imagen Southern Honey Group" class="cursor-zoom-in transition-opacity hover:opacity-80">
                 </div>
                 <div class="md:col-span-8 space-y-4">
                   <div class="flex items-center gap-3">
@@ -340,7 +375,7 @@
             <a href="https://neda.com.ar/" target="_blank" rel="noopener noreferrer" class="group block">
               <article class="grid md:grid-cols-12 gap-6 py-8 border-b border-borde transition-colors hover:border-primario">
                 <div class="md:col-span-2">
-                  <img src="/img/captura-neda-solar-energy.webp" alt="Imagen Neda Solar Energy">
+                  <img src="/img/captura-neda-solar-energy.webp" alt="Imagen Neda Solar Energy" width="1365" height="608" loading="lazy" decoding="async" data-ampliable role="button" tabindex="0" aria-label="Ampliar captura: Imagen Neda Solar Energy" class="cursor-zoom-in transition-opacity hover:opacity-80">
                 </div>
                 <div class="md:col-span-8 space-y-4">
                   <div class="flex items-center gap-3">
@@ -366,7 +401,7 @@
             <a href="https://github.com/bautistaribotta/frencia" target="_blank" rel="noopener noreferrer" class="group block">
               <article class="grid md:grid-cols-12 gap-6 py-8 border-b border-borde transition-colors hover:border-primario">
                 <div class="md:col-span-2">
-                  <img src="/img/captura-ios-app-frencia.webp" alt="Imagen Frencia App">
+                  <img src="/img/captura-ios-app-frencia.webp" alt="Imagen Frencia App" width="1920" height="1080" loading="lazy" decoding="async" data-ampliable role="button" tabindex="0" aria-label="Ampliar captura: Imagen Frencia App" class="cursor-zoom-in transition-opacity hover:opacity-80">
                 </div>
                 <div class="md:col-span-8 space-y-4">
                   <div class="flex items-center gap-3">
@@ -393,7 +428,7 @@
             <a href="https://app.frencia.fit" target="_blank" rel="noopener noreferrer" class="group block">
               <article class="grid md:grid-cols-12 gap-6 py-8 border-b border-borde transition-colors hover:border-primario">
                 <div class="md:col-span-2">
-                  <img src="/img/captura-web-frencia.webp" alt="Imagen Frencia Web">
+                  <img src="/img/captura-web-frencia.webp" alt="Imagen Frencia Web" width="1440" height="810" loading="lazy" decoding="async" data-ampliable role="button" tabindex="0" aria-label="Ampliar captura: Imagen Frencia Web" class="cursor-zoom-in transition-opacity hover:opacity-80">
                 </div>
                 <div class="md:col-span-8 space-y-4">
                   <div class="flex items-center gap-3">
@@ -420,7 +455,7 @@
             <a href="https://frencia.fit" target="_blank" rel="noopener noreferrer" class="group block">
               <article class="grid md:grid-cols-12 gap-6 py-8 border-b border-borde transition-colors hover:border-primario">
                 <div class="md:col-span-2">
-                  <img src="/img/captura-landing-frencia.webp" alt="Imagen Frencia Landing">
+                  <img src="/img/captura-landing-frencia.webp" alt="Imagen Frencia Landing" width="1440" height="786" loading="lazy" decoding="async" data-ampliable role="button" tabindex="0" aria-label="Ampliar captura: Imagen Frencia Landing" class="cursor-zoom-in transition-opacity hover:opacity-80">
                 </div>
                 <div class="md:col-span-8 space-y-4">
                   <div class="flex items-center gap-3">
@@ -447,7 +482,7 @@
             <a href="https://github.com/bautistaribotta/gestoapp" target="_blank" rel="noopener noreferrer" class="group block">
               <article class="grid md:grid-cols-12 gap-6 py-8 border-b border-borde transition-colors hover:border-primario">
                 <div class="md:col-span-2">
-                  <img src="/img/captura-app-gestoapp.webp" alt="Imagen Gestoapp">
+                  <img src="/img/captura-app-gestoapp.webp" alt="Imagen Gestoapp" width="1280" height="720" loading="lazy" decoding="async" data-ampliable role="button" tabindex="0" aria-label="Ampliar captura: Imagen Gestoapp" class="cursor-zoom-in transition-opacity hover:opacity-80">
                 </div>
                 <div class="md:col-span-8 space-y-4">
                   <div class="flex items-center gap-3">
@@ -473,7 +508,7 @@
             <a href="https://github.com/bautistaribotta/ruben-curto-apicultura" target="_blank" rel="noopener noreferrer" class="group block">
               <article class="grid md:grid-cols-12 gap-6 py-8 border-b border-borde transition-colors hover:border-primario">
                 <div class="md:col-span-2">
-                  <img src="/img/captura-ruben-curto-marcos.webp" alt="Imagen Rubén Curto Apicultura">
+                  <img src="/img/captura-ruben-curto-marcos.webp" alt="Imagen Rubén Curto Apicultura" width="1365" height="718" loading="lazy" decoding="async" data-ampliable role="button" tabindex="0" aria-label="Ampliar captura: Imagen Rubén Curto Apicultura" class="cursor-zoom-in transition-opacity hover:opacity-80">
                 </div>
                 <div class="md:col-span-8 space-y-4">
                   <div class="flex items-center gap-3">
@@ -501,7 +536,7 @@
             <a href="https://github.com/bautistaribotta/acopiadora_de_miel" target="_blank" rel="noopener noreferrer" class="group block">
               <article class="grid md:grid-cols-12 gap-6 py-8 border-b border-borde transition-colors hover:border-primario">
                 <div class="md:col-span-2">
-                  <img src="/img/captura-acopiadora-miel.webp" alt="Imagen acopiadora de miel">
+                  <img src="/img/captura-acopiadora-miel.webp" alt="Imagen acopiadora de miel" width="1364" height="718" loading="lazy" decoding="async" data-ampliable role="button" tabindex="0" aria-label="Ampliar captura: Imagen acopiadora de miel" class="cursor-zoom-in transition-opacity hover:opacity-80">
                 </div>
                 <div class="md:col-span-8 space-y-4">
                   <div class="flex items-center gap-3">
@@ -526,7 +561,7 @@
             <a href="https://www.claudiaarias.com.ar/" target="_blank" rel="noopener noreferrer" class="group block">
               <article class="grid md:grid-cols-12 gap-6 py-8 border-b border-borde transition-colors hover:border-primario">
                 <div class="md:col-span-2">
-                  <img src="/img/captura-claudia-arias.webp" alt="Imagen Tienda Claudia Arias">
+                  <img src="/img/captura-claudia-arias.webp" alt="Imagen Tienda Claudia Arias" width="1440" height="810" loading="lazy" decoding="async" data-ampliable role="button" tabindex="0" aria-label="Ampliar captura: Imagen Tienda Claudia Arias" class="cursor-zoom-in transition-opacity hover:opacity-80">
                 </div>
                 <div class="md:col-span-8 space-y-4">
                   <div class="flex items-center gap-3">
@@ -551,7 +586,7 @@
             <a href="https://github.com/bautistaribotta/bautistaribotta.github.io" target="_blank" rel="noopener noreferrer" class="group block">
               <article class="grid md:grid-cols-12 gap-6 py-8 border-b border-borde transition-colors hover:border-primario">
                 <div class="md:col-span-2">
-                  <img src="/img/captura-pagina-web.webp" alt="Imagen pagina web personal">
+                  <img src="/img/captura-pagina-web.webp" alt="Imagen pagina web personal" width="1365" height="608" loading="lazy" decoding="async" data-ampliable role="button" tabindex="0" aria-label="Ampliar captura: Imagen pagina web personal" class="cursor-zoom-in transition-opacity hover:opacity-80">
                 </div>
                 <div class="md:col-span-8 space-y-4">
                   <div class="flex items-center gap-3">
@@ -644,7 +679,7 @@
           <div class="flex flex-col">
             <div class="flex items-center gap-2">
               <div class="w-1/16">
-                <img src="/img/bandera-arg.webp" alt="Bandera de Argentina">
+                <img width="330" height="207" loading="lazy" decoding="async" src="/img/bandera-arg.webp" alt="Bandera de Argentina">
               </div>
               <span class="text-sm text-apagado-primer-plano">Cordoba, Argentina</span>
             </div>
@@ -681,6 +716,16 @@
       </div>
     </div>
   </footer>
+
+  <!-- Visor de capturas -->
+  <dialog id="visor-imagen" aria-label="Captura ampliada" class="m-auto w-[92vw] max-w-3xl overflow-visible bg-transparent p-0 backdrop:bg-fondo/80 backdrop:backdrop-blur-sm">
+    <div class="relative">
+      <button id="visor-cerrar" type="button" aria-label="Cerrar" class="absolute -top-3 -right-3 z-10 flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-borde bg-card text-primer-plano transition-colors hover:border-primario hover:text-primario">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+      </button>
+      <img id="visor-foto" alt="" class="block max-h-[85vh] w-full rounded-lg border border-borde object-contain">
+    </div>
+  </dialog>
 
   <script src="script.js"></script>
 </body>

@@ -3,16 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentYearEl = document.getElementById("current-year");
     if(currentYearEl) currentYearEl.textContent = new Date().getFullYear();
 
-    // Version Switcher
-    const versionSelect = document.getElementById("historial_versiones");
-    if (versionSelect) {
-        versionSelect.addEventListener("change", (e) => {
-            if (e.target.value === "Version 1") {
-                window.location.href = "v1/index.html";
-            }
-        });
-    }
-
     // Navbar scroll effect
     const header = document.getElementById("main-header");
     
@@ -74,6 +64,35 @@ document.addEventListener("DOMContentLoaded", () => {
             link.addEventListener("click", () => {
                 mobileMenu.classList.add("hidden");
             });
+        });
+    }
+
+    // Visor de capturas
+    const visor = document.getElementById("visor-imagen");
+    const visorFoto = document.getElementById("visor-foto");
+    const visorCerrar = document.getElementById("visor-cerrar");
+
+    if (visor && visorFoto) {
+        const abrirVisor = (e) => {
+            // Las capturas estan dentro del enlace del proyecto: el clic no debe navegar.
+            e.preventDefault();
+            e.stopPropagation();
+            visorFoto.src = e.currentTarget.currentSrc || e.currentTarget.src;
+            visorFoto.alt = e.currentTarget.alt;
+            visor.showModal();
+        };
+
+        document.querySelectorAll("[data-ampliable]").forEach(img => {
+            img.addEventListener("click", abrirVisor);
+            img.addEventListener("keydown", (e) => {
+                if (e.key === "Enter" || e.key === " ") abrirVisor(e);
+            });
+        });
+
+        visorCerrar.addEventListener("click", () => visor.close());
+        // El clic en el fondo cae sobre el dialog mismo, no sobre su contenido.
+        visor.addEventListener("click", (e) => {
+            if (e.target === visor) visor.close();
         });
     }
 

@@ -1,6 +1,6 @@
 # Portafolio - Bautista Ribotta
 
-Sitio web personal para la exhibición de proyectos y habilidades técnicas. Este proyecto representa mi version 2.0 de la pagina web, podes acceder a la primer version mediante el uso del menu desplegable es la esquina superior izquierda
+Sitio web personal para la exhibición de proyectos y habilidades técnicas. Este proyecto representa mi version 2.0 de la pagina web.
 
 ## Tecnologías
 
