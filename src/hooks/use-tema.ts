@@ -6,9 +6,9 @@ const CLAVE = "tema"
 
 function leerTema(): Tema {
   try {
-    return localStorage.getItem(CLAVE) === "verde" ? "verde" : "negro"
+    return localStorage.getItem(CLAVE) === "negro" ? "negro" : "verde"
   } catch {
-    return "negro"
+    return "verde"
   }
 }
 

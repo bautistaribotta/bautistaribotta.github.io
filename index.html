@@ -53,12 +53,13 @@
   <meta name="google-site-verification" content="yF8rFaBtn4zVnRRlTDph6bcoUX1yrd6hr8QAO06quWU" />
 
   <link rel="icon" type="image/svg+xml" href="/img/icon-dev.svg">
-  <meta name="theme-color" content="oklch(0 0 0)">
+  <meta name="theme-color" content="oklch(0.13 0.02 160)">
 
-  <!-- Aplico el tema guardado antes de pintar para evitar el parpadeo -->
+  <!-- Aplico el tema antes de pintar para evitar el parpadeo: verde salvo que se haya elegido negro -->
   <script>
+    document.documentElement.dataset.theme = "verde";
     try {
-      if (localStorage.getItem("tema") === "verde") document.documentElement.dataset.theme = "verde";
+      if (localStorage.getItem("tema") === "negro") delete document.documentElement.dataset.theme;
     } catch (e) {}
   </script>
 </head>
