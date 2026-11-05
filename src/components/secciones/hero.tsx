@@ -3,7 +3,7 @@ import { ArrowDown, FileDown, MapPin } from "lucide-react"
 import { IconoGithub, IconoLinkedin } from "@/components/iconos"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
+import { Tooltip } from "@/components/ui/tooltip"
 import { redes } from "@/data/contenido"
 
 export function Hero() {
@@ -46,26 +46,20 @@ export function Hero() {
                 </a>
               </Button>
 
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Button asChild variant="outline" size="icon" className="size-10 rounded-full">
-                    <a href={redes.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                      <IconoLinkedin />
-                    </a>
-                  </Button>
-                </TooltipTrigger>
-                <TooltipContent sideOffset={6}>LinkedIn</TooltipContent>
+              <Tooltip texto="LinkedIn">
+                <Button asChild variant="outline" size="icon" className="size-10 rounded-full">
+                  <a href={redes.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <IconoLinkedin />
+                  </a>
+                </Button>
               </Tooltip>
 
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Button asChild variant="outline" size="icon" className="size-10 rounded-full">
-                    <a href={redes.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                      <IconoGithub />
-                    </a>
-                  </Button>
-                </TooltipTrigger>
-                <TooltipContent sideOffset={6}>GitHub</TooltipContent>
+              <Tooltip texto="GitHub">
+                <Button asChild variant="outline" size="icon" className="size-10 rounded-full">
+                  <a href={redes.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <IconoGithub />
+                  </a>
+                </Button>
               </Tooltip>
             </div>
           </div>

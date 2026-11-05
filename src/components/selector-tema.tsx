@@ -1,6 +1,6 @@
 import { Leaf, Moon } from "lucide-react"
 
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
+import { Tooltip } from "@/components/ui/tooltip"
 import type { Tema } from "@/hooks/use-tema"
 import { cn } from "@/lib/utils"
 
@@ -26,27 +26,22 @@ export function SelectorTema({ tema, onCambiar, className }: Props) {
       {opciones.map(({ valor, etiqueta, Icono }) => {
         const activo = tema === valor
         return (
-          <Tooltip key={valor}>
-            <TooltipTrigger asChild>
-              <button
-                type="button"
-                role="radio"
-                aria-checked={activo}
-                aria-label={etiqueta}
-                onClick={() => onCambiar(valor)}
-                className={cn(
-                  "flex size-7 cursor-pointer items-center justify-center rounded-full transition-colors outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50",
-                  activo
-                    ? "bg-accent text-foreground"
-                    : "text-muted-foreground hover:text-foreground"
-                )}
-              >
-                <Icono className="size-3.5" />
-              </button>
-            </TooltipTrigger>
-            <TooltipContent side="bottom" sideOffset={6}>
-              {etiqueta}
-            </TooltipContent>
+          <Tooltip key={valor} texto={etiqueta} lado="bottom">
+            <button
+              type="button"
+              role="radio"
+              aria-checked={activo}
+              aria-label={etiqueta}
+              onClick={() => onCambiar(valor)}
+              className={cn(
+                "flex size-7 cursor-pointer items-center justify-center rounded-full transition-colors outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50",
+                activo
+                  ? "bg-accent text-foreground"
+                  : "text-muted-foreground hover:text-foreground"
+              )}
+            >
+              <Icono className="size-3.5" />
+            </button>
           </Tooltip>
         )
       })}

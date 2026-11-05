@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { lazy, Suspense, useState } from "react"
 import { ArrowUpRight, Code2, ExternalLink, Maximize2 } from "lucide-react"
 
 import { IconoGithub } from "@/components/iconos"
@@ -13,11 +13,19 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog"
 import { proyectos, redes, type Proyecto } from "@/data/contenido"
+
+const cargarVisor = () => import("@/components/secciones/visor-captura")
+const VisorCaptura = lazy(cargarVisor)
 
 export function Proyectos() {
   const [ampliado, setAmpliado] = useState<Proyecto | null>(null)
+  const [visorPedido, setVisorPedido] = useState(false)
+
+  const ampliar = (proyecto: Proyecto) => {
+    setVisorPedido(true)
+    setAmpliado(proyecto)
+  }
 
   return (
     <section id="projects" className="scroll-mt-16 border-t py-24 md:py-32">
@@ -36,7 +44,9 @@ export function Proyectos() {
             >
               <button
                 type="button"
-                onClick={() => setAmpliado(p)}
+                onClick={() => ampliar(p)}
+                onPointerEnter={cargarVisor}
+                onFocus={cargarVisor}
                 aria-label={`Ampliar captura: ${p.nombre}`}
                 className="relative block aspect-video w-full cursor-zoom-in overflow-hidden border-b bg-muted outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50"
               >
@@ -124,23 +134,11 @@ export function Proyectos() {
         </div>
       </div>
 
-      <Dialog open={ampliado !== null} onOpenChange={(abierto) => !abierto && setAmpliado(null)}>
-        <DialogContent className="max-w-[calc(100%-2rem)] gap-3 p-3 sm:max-w-4xl">
-          {ampliado && (
-            <>
-              <DialogTitle className="px-1 pt-1 pr-8 text-sm font-medium">{ampliado.nombre}</DialogTitle>
-              <DialogDescription className="sr-only">Captura ampliada del proyecto</DialogDescription>
-              <img
-                src={`/img/${ampliado.imagen}.webp`}
-                alt={`Captura de ${ampliado.nombre}`}
-                width={ampliado.ancho}
-                height={ampliado.alto}
-                className="max-h-[80vh] w-full rounded-md border object-contain"
-              />
-            </>
-          )}
-        </DialogContent>
-      </Dialog>
+      {visorPedido && (
+        <Suspense fallback={null}>
+          <VisorCaptura proyecto={ampliado} onCerrar={() => setAmpliado(null)} />
+        </Suspense>
+      )}
     </section>
   )
 }

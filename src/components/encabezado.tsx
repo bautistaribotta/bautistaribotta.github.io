@@ -1,23 +1,17 @@
-import { useEffect, useState } from "react"
+import { lazy, Suspense, useEffect, useRef, useState } from "react"
 import { Menu } from "lucide-react"
 
 import { SelectorTema } from "@/components/selector-tema"
 import { Button } from "@/components/ui/button"
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet"
 import { navegacion } from "@/data/contenido"
 import { useSeccionActiva } from "@/hooks/use-seccion-activa"
 import type { Tema } from "@/hooks/use-tema"
 import { cn } from "@/lib/utils"
 
 const ids = navegacion.map((n) => n.id)
+
+const cargarMenu = () => import("@/components/menu-movil")
+const MenuMovil = lazy(cargarMenu)
 
 type Props = {
   tema: Tema
@@ -27,6 +21,9 @@ type Props = {
 export function Encabezado({ tema, onCambiarTema }: Props) {
   const activa = useSeccionActiva(ids)
   const [conFondo, setConFondo] = useState(false)
+  const [menuPedido, setMenuPedido] = useState(false)
+  const [menuAbierto, setMenuAbierto] = useState(false)
+  const botonMenu = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     const actualizar = () => setConFondo(window.scrollY > 50)
@@ -72,36 +69,31 @@ export function Encabezado({ tema, onCambiarTema }: Props) {
 
         <div className="flex items-center gap-2 md:hidden">
           <SelectorTema tema={tema} onCambiar={onCambiarTema} />
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" aria-label="Abrir menú">
-                <Menu />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-64">
-              <SheetHeader>
-                <SheetTitle>Navegación</SheetTitle>
-                <SheetDescription className="sr-only">Secciones del portafolio</SheetDescription>
-              </SheetHeader>
-              <ul className="flex flex-col gap-1 px-4">
-                {navegacion.map(({ id, etiqueta }) => (
-                  <li key={id}>
-                    <SheetClose asChild>
-                      <a
-                        href={`#${id}`}
-                        className={cn(
-                          "block rounded-md px-3 py-2 text-sm transition-colors hover:bg-accent hover:text-foreground",
-                          activa === id ? "text-foreground" : "text-muted-foreground"
-                        )}
-                      >
-                        {etiqueta}
-                      </a>
-                    </SheetClose>
-                  </li>
-                ))}
-              </ul>
-            </SheetContent>
-          </Sheet>
+          <Button
+            ref={botonMenu}
+            variant="ghost"
+            size="icon"
+            aria-label="Abrir menú"
+            aria-haspopup="dialog"
+            aria-expanded={menuAbierto}
+            onPointerDown={cargarMenu}
+            onClick={() => {
+              setMenuPedido(true)
+              setMenuAbierto(true)
+            }}
+          >
+            <Menu />
+          </Button>
+          {menuPedido && (
+            <Suspense fallback={null}>
+              <MenuMovil
+                abierto={menuAbierto}
+                onCambiar={setMenuAbierto}
+                onCerrado={() => botonMenu.current?.focus({ preventScroll: true })}
+                activa={activa}
+              />
+            </Suspense>
+          )}
         </div>
       </nav>
     </header>

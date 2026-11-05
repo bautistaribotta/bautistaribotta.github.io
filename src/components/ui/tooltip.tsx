@@ -1,51 +1,33 @@
-import * as React from "react"
-import { Tooltip as TooltipPrimitive } from "radix-ui"
+import type { ReactNode } from "react"
 
 import { cn } from "@/lib/utils"
 
-function TooltipProvider({
-  delayDuration = 0,
-  ...props
-}: React.ComponentProps<typeof TooltipPrimitive.Provider>) {
+type Props = {
+  texto: string
+  lado?: "top" | "bottom"
+  children: ReactNode
+}
+
+/** Tooltip de puro CSS: aparece con hover o foco sin sumar JavaScript a la carga inicial */
+export function Tooltip({ texto, lado = "top", children }: Props) {
   return (
-    <TooltipPrimitive.Provider
-      data-slot="tooltip-provider"
-      delayDuration={delayDuration}
-      {...props}
-    />
-  )
-}
-
-function Tooltip({ ...props }: React.ComponentProps<typeof TooltipPrimitive.Root>) {
-  return <TooltipPrimitive.Root data-slot="tooltip" {...props} />
-}
-
-function TooltipTrigger({ ...props }: React.ComponentProps<typeof TooltipPrimitive.Trigger>) {
-  return <TooltipPrimitive.Trigger data-slot="tooltip-trigger" {...props} />
-}
-
-function TooltipContent({
-  className,
-  sideOffset = 0,
-  children,
-  ...props
-}: React.ComponentProps<typeof TooltipPrimitive.Content>) {
-  return (
-    <TooltipPrimitive.Portal>
-      <TooltipPrimitive.Content
-        data-slot="tooltip-content"
-        sideOffset={sideOffset}
+    <span className="group/tooltip relative inline-flex">
+      {children}
+      <span
+        aria-hidden="true"
         className={cn(
-          "bg-foreground text-background animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 w-fit origin-(--radix-tooltip-content-transform-origin) rounded-md px-3 py-1.5 text-xs text-balance",
-          className
+          "pointer-events-none absolute left-1/2 z-50 w-max -translate-x-1/2 scale-95 rounded-md bg-foreground px-3 py-1.5 text-xs text-background opacity-0 transition-[opacity,scale] duration-150 group-hover/tooltip:scale-100 group-hover/tooltip:opacity-100 group-hover/tooltip:delay-200 group-has-[:focus-visible]/tooltip:scale-100 group-has-[:focus-visible]/tooltip:opacity-100",
+          lado === "top" ? "bottom-full mb-1.5" : "top-full mt-1.5"
         )}
-        {...props}
       >
-        {children}
-        <TooltipPrimitive.Arrow className="bg-foreground fill-foreground z-50 size-2.5 translate-y-[calc(-50%_-_2px)] rotate-45 rounded-[2px]" />
-      </TooltipPrimitive.Content>
-    </TooltipPrimitive.Portal>
+        {texto}
+        <span
+          className={cn(
+            "absolute left-1/2 size-2.5 -translate-x-1/2 rotate-45 rounded-[2px] bg-foreground",
+            lado === "top" ? "-bottom-1" : "-top-1"
+          )}
+        />
+      </span>
+    </span>
   )
 }
-
-export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
