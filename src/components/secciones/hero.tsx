@@ -64,6 +64,7 @@ export function Hero() {
             </div>
           </div>
 
+          {/* La foto solo se ve desde lg: en pantallas chicas sizes pide la variante mas liviana */}
           <div className="hidden justify-center lg:flex">
             <div className="group relative">
               <div className="relative overflow-hidden rounded-xl border bg-card p-2 shadow-2xl">
@@ -72,7 +73,9 @@ export function Hero() {
                     width={720}
                     height={1280}
                     fetchPriority="high"
-                    src="/img/imagen-personal.webp"
+                    src="/img/imagen-personal-640.webp"
+                    srcSet="/img/imagen-personal-320.webp 320w, /img/imagen-personal-640.webp 640w"
+                    sizes="(min-width: 1024px) 320px, 1px"
                     alt="Bautista Ribotta"
                     className="size-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
