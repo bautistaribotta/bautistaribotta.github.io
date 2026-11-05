@@ -30,8 +30,8 @@ export function Hero() {
             </h1>
 
             <p className="max-w-md text-lg leading-relaxed text-muted-foreground">
-              Finalizando la carrera de Ingeniería en Software. Desarrollador full-stack, me
-              especializo en backend con Python (Django).
+              Finalizando la carrera de Ingeniería en Software. Desarrollador full-stack de
+              aplicaciones web y mobile.
             </p>
 
             <div className="flex flex-wrap items-center gap-3 pt-2">
