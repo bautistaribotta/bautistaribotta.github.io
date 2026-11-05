@@ -15,7 +15,7 @@ export function Pie() {
     <footer className="border-t">
       <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="grid items-center gap-8 md:grid-cols-3">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center justify-center gap-2 md:justify-start">
             <img
               width={330}
               height={207}
@@ -28,7 +28,7 @@ export function Pie() {
             <span className="text-sm text-muted-foreground">Córdoba, Argentina</span>
           </div>
 
-          <div className="flex items-center gap-5 md:justify-center">
+          <div className="flex items-center justify-center gap-5">
             {enlaces.map(({ href, etiqueta, Icono }) => (
               <a
                 key={etiqueta}
@@ -43,7 +43,7 @@ export function Pie() {
             ))}
           </div>
 
-          <p className="text-sm text-muted-foreground md:text-right">
+          <p className="text-center text-sm text-muted-foreground md:text-right">
             &copy; {new Date().getFullYear()} Bautista Ribotta
           </p>
         </div>
