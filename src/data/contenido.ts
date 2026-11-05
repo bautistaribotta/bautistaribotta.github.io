@@ -39,13 +39,13 @@ export const estadisticas = [
 export const habilidades: GrupoHabilidades[] = [
   {
     titulo: "Lenguajes",
-    principales: ["Python", "Java", "TypeScript"],
-    aprendiendo: ["JavaScript"],
+    principales: ["Python", "Java", "JavaScript"],
+    aprendiendo: ["TypeScript"],
   },
   {
     titulo: "Frontend",
-    principales: ["HTML", "CSS", "Tailwind", "React"],
-    aprendiendo: ["React Native", "Expo", "Astro", "Vite"],
+    principales: ["HTML", "CSS", "Tailwind", "React", "React Native", "Expo"],
+    aprendiendo: ["Astro", "Vite"],
   },
   {
     titulo: "Backend & DB",
