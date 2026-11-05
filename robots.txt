@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bautistaribotta.github.io/sitemap.xml
