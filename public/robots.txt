@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bautistaribotta.github.io/sitemap.xml
+Sitemap: https://bautistaribotta.com/sitemap.xml
